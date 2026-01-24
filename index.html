@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Parmar - Creative Visionary</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- (Optional) Your platform SDK scripts -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; }
+
+    .font-heading { font-family: 'Syne', sans-serif; }
+    .font-body { font-family: 'Space Grotesk', sans-serif; }
+    .font-tech { font-family: 'Orbitron', monospace; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+    .animate-scale { animation: scaleIn 0.6s ease-out forwards; }
+
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+    .delay-800 { animation-delay: 0.8s; }
+
+    .trust-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .trust-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15); }
+
+    .badge-pulse { animation: pulse 2s ease-in-out infinite; }
+
+    .nav-shadow { box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
+
+    .testimonial-card {
+      background: white;
+      border-left: 4px solid #f97316;
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transform: translateX(4px); }
+
+    .stat-number {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cta-button { position: relative; overflow: hidden; transition: all 0.3s ease; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3); }
+
+    .trust-badge { border: 2px solid #e5e7eb; transition: all 0.3s ease; }
+    .trust-badge:hover { border-color: #1e3a8a; background: #f0f9ff; }
+
+    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e3a8a, #2563eb); border-radius: 5px; }
+
+    /* Dropdown */
+    .dropdown { position: relative; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 800px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      padding: 24px;
+      z-index: 100;
+      margin-top: 8px;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      color: #475569;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 13px;
+      border-radius: 6px;
+    }
+    .dropdown-content a:hover { background: #f0f9ff; color: #1e3a8a; }
+
+    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .category-column { display: flex; flex-direction: column; gap: 4px; }
+
+    .category-header {
+      padding: 8px 12px;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #f97316;
+      background: #fef3c7;
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+
+    .dropdown-arrow { display: inline-block; margin-left: 4px; transition: transform 0.3s ease; }
+    .dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+
+    /* Help anchor scroll with fixed nav */
+    section { scroll-margin-top: 96px; }
+  </style>
+
+  <style>@view-transition { navigation: auto; }</style>
+</head>
+
+<body class="h-full font-body">
+  <div id="app-wrapper" class="w-full h-full overflow-auto" style="background:#ffffff;">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 nav-shadow"
+         style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg flex items-center justify-center"
+               style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);">
+            <span id="nav-initials" class="font-heading font-bold text-lg text-white">MP</span>
+          </div>
+          <div>
+            <div class="font-heading font-bold text-lg" style="color:#1e3a8a;">Mohit Parmar</div>
+            <div class="font-body text-xs" style="color:#64748b;">Creative Strategist</div>
+          </div>
+        </div>
+
+        <div class="hidden md:flex gap-8 items-center">
+          <div class="dropdown">
+            <a href="#services" class="font-body text-sm font-medium transition-colors" style="color:#475569;">
+              Services <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-content">
+              <div class="category-grid">
+                <div class="category-column">
+                  <div class="category-header">🎨 Creative Services</div>
+                  <a href="#services">Video Editing &amp; Post Production</a>
+                  <a href="#services">Brand &amp; Creative Direction</a>
+                  <a href="#services">UI/UX Design</a>
+                  <a href="#services">Brand Management</a>
+                </div>
+
+                <div class="category-column">
+                  <div class="category-header">💻 Technical Services</div>
+                  <a href="#services">Web Development</a>
+                  <a href="#services">E-Commerce Solutions</a>
+                  <a href="#services">App Development</a>
+                  <a href="#services">SaaS &amp; Integration</a>
+                </div>
+
+                <div class="category-column">
+                  <div class="category-header">📈 Marketing Services</div>
+                  <a href="#services">SEO &amp; SMM</a>
+                  <a href="#services">Email &amp; WhatsApp Marketing</a>
+                  <a href="#services">Marketplace Onboarding</a>
+                  <a href="#services">Analytics &amp; CRO</a>
+                </div>
+
+                <div class="category-column">
+                  <div class="category-header">🚀 Innovation Services</div>
+                  <a href="#services">Gen AI Automation</a>
+                  <a href="#services">D2C &amp; B2B Business</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#pricing" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Investment</a>
+          <a href="#results" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Results</a>
+          <a href="#contact"
+             class="px-6 py-2.5 rounded-lg font-body text-sm font-semibold text-white transition-all hover:scale-105"
+             style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+            Book Consultation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left Content -->
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 opacity-0 animate-fade-up"
+                 style="background:#fef3c7; border:1px solid #fbbf24;">
+              <span class="w-2 h-2 rounded-full badge-pulse" style="background:#f97316;"></span>
+              <span class="font-body text-sm font-semibold" style="color:#92400e;">Available for New Projects</span>
+            </div>
+
+            <h1 id="hero-name"
+                class="font-heading text-6xl md:text-7xl font-bold mb-4 opacity-0 animate-fade-up delay-100"
+                style="color:#0f172a; line-height:1.1;">
+              Mohit Dheeraj Parmar
+            </h1>
+
+            <p id="hero-title"
+               class="font-heading text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-fade-up delay-200"
+               style="color:#1e3a8a;">
+              Creative Brand Strategist &amp; Gen-AI Enabler
+            </p>
+
+            <p id="hero-tagline"
+               class="font-body text-lg mb-8 leading-relaxed opacity-0 animate-fade-up delay-300"
+               style="color:#475569;">
+              Transforming brands with data-driven creative strategies and AI-powered workflows. Proven track record delivering 3.5x ROAS for 50+ D2C and B2B companies.
+            </p>
+
+            <!-- Trust Indicators -->
+            <div class="flex flex-wrap gap-6 mb-10 opacity-0 animate-fade-up delay-400">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="font-body text-sm font-medium" style="color:#334155;">10+ Years Experience</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="font-body text-sm font-medium" style="color:#334155;">500+ Projects Delivered</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="font-body text-sm font-medium" style="color:#334155;">100% Client Satisfaction</span>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 opacity-0 animate-fade-up delay-500">
+              <a id="cta-primary" href="#contact"
+                 class="cta-button px-8 py-4 rounded-lg font-body text-base font-bold text-white shadow-lg"
+                 style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+                Get Free Consultation
+              </a>
+
+              <a id="cta-secondary" href="#results"
+                 class="px-8 py-4 rounded-lg font-body text-base font-bold transition-all hover:scale-105"
+                 style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
+                View Case Studies
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Visual -->
+          <div class="relative opacity-0 animate-scale delay-600">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl"
+                 style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+              <div class="w-full h-full flex items-center justify-center p-12">
+                <div class="text-center">
+                  <div class="text-9xl mb-6">👨‍💼</div>
+                  <div class="font-heading text-2xl font-bold mb-2" style="color:#1e3a8a;">Trusted by Top Brands</div>
+                  <div class="font-body text-base" style="color:#64748b;">Delivering Excellence Since 2014</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Trust Badges -->
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl trust-badge">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:#dcfce7;">
+                  <svg class="w-6 h-6" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-heading text-sm font-bold" style="color:#0f172a;">Verified Pro</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Top 1% Creator</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl trust-badge">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:#fef3c7;">
+                  <span class="text-2xl">⭐</span>
+                </div>
+                <div>
+                  <div class="font-heading text-sm font-bold" style="color:#0f172a;">5.0 Rating</div>
+                  <div class="font-body text-xs" style="color:#64748b;">50+ Reviews</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-6" style="background:#1e3a8a;">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="opacity-0 animate-fade-up delay-100">
+            <div id="years-stat" class="font-heading text-5xl font-bold mb-2 text-white">10+</div>
+            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Years Experience</div>
+          </div>
+          <div class="opacity-0 animate-fade-up delay-200">
+            <div id="projects-stat" class="font-heading text-5xl font-bold mb-2 text-white">500+</div>
+            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Projects Completed</div>
+          </div>
+          <div class="opacity-0 animate-fade-up delay-300">
+            <div id="brands-stat" class="font-heading text-5xl font-bold mb-2 text-white">50+</div>
+            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Brands Served</div>
+          </div>
+          <div class="opacity-0 animate-fade-up delay-400">
+            <div class="font-heading text-5xl font-bold mb-2 text-white">3.5x</div>
+            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Average ROAS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Carousel Section -->
+    <section id="services" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">What I Offer</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Comprehensive Creative Solutions</h2>
+          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">End-to-end creative services designed to elevate your brand and drive measurable results</p>
+        </div>
+
+        <div class="relative">
+          <div class="overflow-hidden" id="carousel-container">
+            <div class="flex transition-transform duration-500 ease-out" id="carousel-track">
+
+              <!-- Service 1 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">🎬</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Video Editing &amp; Post Production</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Professional video editing, color grading, motion graphics using DaVinci Resolve, After Effects, and Cinema 4D.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">DaVinci Resolve</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">After Effects</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Premiere Pro</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Cinema 4D</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">🎨</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Brand &amp; Creative Direction</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Strategic brand identity development and creative campaigns using Adobe Creative Suite and Figma.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Adobe Creative Suite</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Figma</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Canva</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Adobe Firefly</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">🛒</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">E-Commerce Solutions</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Full-stack e-commerce development for Shopify, Amazon, and WordPress platforms with custom integrations.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Platforms</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Shopify</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">🤖</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Gen AI Automation</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">AI-powered creative workflows and automation using ChatGPT, Gemini, ElevenLabs, and n8n.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">ChatGPT</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Gemini Pro</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">n8n</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">ElevenLabs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">📊</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Analytics &amp; CRO</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Data-driven optimization and tracking with GA4, Hotjar, Power BI, and advanced Excel reporting.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">GA4</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hotjar</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Power BI</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Excel</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">💻</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Web Development</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Custom web development with HTML, CSS, Liquid, and modern hosting solutions via Hostinger and Cloudflare.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Skills</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">HTML/CSS</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Liquid</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Hostinger</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Cloudflare</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 7 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">🎯</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">UI/UX Design</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">User-centered design experiences with wireframing, prototyping, and conversion-optimized interfaces.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Deliverables</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">User Research</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Wireframing</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Prototyping</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">CRO Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 8 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">🏆</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Brand Management</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Complete brand identity systems, positioning strategies, and brand guidelines for consistent market presence.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Services Included</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Brand Strategy</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Logo Design</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Brand Guidelines</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Positioning</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 9 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">🚀</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Marketplace Onboarding</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Complete setup and optimization for Amazon, Flipkart, and other major marketplaces with SEO-optimized listings.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Marketplaces</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">eBay</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Etsy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 10 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">📣</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">SEO &amp; Social Media Marketing</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Search engine optimization and multi-platform social media campaigns for maximum organic reach and engagement.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Channels</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Google SEO</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Instagram</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Facebook</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">LinkedIn</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 11 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">✉️</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Email &amp; WhatsApp Marketing</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Automated email campaigns, EDM design, WhatsApp Business API integration, and broadcast campaigns.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Services</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">EDM Design</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Automation</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">WhatsApp API</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Broadcasts</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 12 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">🔗</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">SaaS &amp; Integration Management</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Third-party integrations, API connections, CRM setup, and marketing automation tool stack management.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Platforms</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Zapier</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">HubSpot</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Klaviyo</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Mailchimp</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 13 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                    <span class="text-3xl">📲</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">App Development</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Mobile app design and development consultation for iOS and Android with focus on e-commerce and customer engagement.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Specialization</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">iOS</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Android</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">E-commerce Apps</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">UI Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 14 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
+                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                    <span class="text-3xl">💼</span>
+                  </div>
+                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">D2C &amp; B2B Business Development</h3>
+                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">End-to-end business development strategies for direct-to-consumer brands and B2B service companies.</p>
+                  <div class="space-y-2">
+                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Focus Areas</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">D2C Strategy</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">B2B Growth</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Go-to-Market</span>
+                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Sales Funnels</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button id="carousel-prev"
+                  class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                  style="background:white; border:2px solid #e2e8f0;">
+            <svg class="w-6 h-6" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button id="carousel-next"
+                  class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+                  style="background:white; border:2px solid #e2e8f0;">
+            <svg class="w-6 h-6" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Indicators -->
+          <div class="flex justify-center gap-2 mt-8" id="carousel-indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Tools & Technologies -->
+    <section class="py-24 px-6" style="background:#f8fafc;">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Technical Expertise</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Tools &amp; Technologies</h2>
+          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">Mastery across industry-leading creative, technical, and automation platforms</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Creative -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                <span class="text-2xl">🎨</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Creative</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Adobe Creative Suite</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Figma</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Canva</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Adobe Firefly</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Lovart</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Gemini Pro</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">AI Upscalers</span>
+            </div>
+          </div>
+
+          <!-- Post-Production -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                <span class="text-2xl">🎬</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Post-Production</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Cinema 4D</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Octane Render</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">DaVinci Resolve</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">After Effects</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Premiere Pro</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Adobe Character Animator</span>
+            </div>
+          </div>
+
+          <!-- Pre-Production -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                <span class="text-2xl">📝</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Pre-Production</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Google Flow</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Final Draft</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Blackmagic Camera</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hedge / ShotPut Pro</span>
+            </div>
+          </div>
+
+          <!-- Gen AI -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                <span class="text-2xl">🤖</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Gen AI Automation</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">ChatGPT</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Gemini</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">ElevenLabs</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Firefly</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">n8n</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Flow</span>
+            </div>
+          </div>
+
+          <!-- Web -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                <span class="text-2xl">💻</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Web Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">HTML</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">CSS</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Liquid (Shopify)</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hostinger</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Cloudflare</span>
+            </div>
+          </div>
+
+          <!-- Analytics -->
+          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+                <span class="text-2xl">📊</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Analytics &amp; Data</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">GA4</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Hotjar</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Advanced Excel</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Power BI</span>
+            </div>
+          </div>
+
+          <!-- Ecom -->
+          <div class="p-8 rounded-2xl md:col-span-2 lg:col-span-3" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+                <span class="text-2xl">🛒</span>
+              </div>
+              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">E-Commerce Marketplaces</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Shopify</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress WooCommerce</span>
+              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Investment Packages -->
+    <section id="pricing" class="py-24 px-6" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Investment Options</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Strategic Investment Packages</h2>
+          <p class="font-body text-lg max-w-3xl mx-auto mb-4" style="color:#64748b;">Transparent pricing for premium creative services. No hidden fees, no surprises.</p>
+          <p class="font-body text-base max-w-2xl mx-auto font-semibold" style="color:#1e3a8a;">All packages include unlimited revisions until you're 100% satisfied</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <!-- Starter -->
+          <div class="trust-card p-8 rounded-2xl relative overflow-hidden" style="background:white; border:2px solid #e2e8f0;">
+            <div class="mb-6">
+              <div class="text-4xl mb-4">🚀</div>
+              <h3 class="font-heading text-2xl font-bold mb-2" style="color:#0f172a;">Starter Package</h3>
+              <p class="font-body text-sm mb-4" style="color:#64748b;">Perfect for testing the waters</p>
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-heading text-sm line-through" style="color:#94a3b8;">£3,500</span>
+                <span id="starter-price" class="font-heading text-5xl font-bold" style="color:#1e3a8a;">£2,500</span>
+              </div>
+              <p class="font-body text-xs font-semibold" style="color:#22c55e;">✓ Limited Time: Save £1,000</p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">5x High-Impact Video Ads</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Professional editing &amp; motion graphics</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Basic Brand Identity</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Logo refinement &amp; style guide</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Social Media Graphics</div>
+                  <div class="font-body text-xs" style="color:#64748b;">10 custom templates</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">SEO Setup &amp; Email Template</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Basic optimization + 1 EDM design</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Unlimited Revisions</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Until 100% satisfied</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105"
+               style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
+              Get Started
+            </a>
+            <p id="starter-timeline" class="text-center font-body text-xs mt-4" style="color:#64748b;">Delivery: 2 weeks</p>
+          </div>
+
+          <!-- Growth (Popular) -->
+          <div class="trust-card p-8 rounded-2xl relative overflow-hidden"
+               style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); border:3px solid #fbbf24; transform: scale(1.05);">
+            <div class="absolute top-0 right-0 px-4 py-2 rounded-bl-2xl font-body text-xs font-bold text-white" style="background:#f97316;">
+              MOST POPULAR
+            </div>
+
+            <div class="mb-6 mt-6">
+              <div class="text-4xl mb-4">⚡</div>
+              <h3 class="font-heading text-2xl font-bold mb-2 text-white">Growth Package</h3>
+              <p class="font-body text-sm mb-4 text-white" style="opacity:0.9;">For serious brand growth</p>
+              <div class="flex items-baseline gap-2 mb-2">
+                <span class="font-heading text-sm line-through text-white" style="opacity:0.7;">£9,500</span>
+                <span id="growth-price" class="font-heading text-5xl font-bold text-white">£7,500</span>
+              </div>
+              <p class="font-body text-xs font-semibold" style="color:#fbbf24;">✓ Limited Time: Save £2,000</p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">15x Video Ads + 3 Hero Videos</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Full campaign creative suite</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">Complete Brand Management</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Strategy, identity &amp; guidelines</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">E-Commerce + Marketplace Setup</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Shopify store + Amazon onboarding</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">SEO, SMM &amp; Email Marketing</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Multi-channel digital presence</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">UI/UX Design &amp; Analytics</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Conversion optimization + tracking</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold text-white">AI Automation + Priority Support</div>
+                  <div class="font-body text-xs text-white" style="opacity:0.8;">Workflow setup + direct access</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105 shadow-xl"
+               style="background:#f97316; color:white;">
+              Start Your Growth
+            </a>
+            <p id="growth-timeline" class="text-center font-body text-xs mt-4 text-white" style="opacity:0.9;">Delivery: 4 weeks</p>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="trust-card p-8 rounded-2xl relative overflow-hidden" style="background:white; border:2px solid #e2e8f0;">
+            <div class="mb-6">
+              <div class="text-4xl mb-4">👑</div>
+              <h3 class="font-heading text-2xl font-bold mb-2" style="color:#0f172a;">Enterprise Package</h3>
+              <p class="font-body text-sm mb-4" style="color:#64748b;">Complete brand transformation</p>
+              <div class="flex items-baseline gap-2 mb-2">
+                <span id="enterprise-price" class="font-heading text-5xl font-bold" style="color:#1e3a8a;">£15,000+</span>
+              </div>
+              <p class="font-body text-xs font-semibold" style="color:#1e3a8a;">Custom pricing for your needs</p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Unlimited Creative Production</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Monthly video &amp; design content</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Full Brand &amp; Marketing Ecosystem</div>
+                  <div class="font-body text-xs" style="color:#64748b;">All services integrated</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Multi-Platform E-Commerce</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Shopify, Amazon, Flipkart setup</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">D2C &amp; B2B Growth Strategy</div>
+                  <div class="font-body text-xs" style="color:#64748b;">Business development consulting</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">App Development Consultation</div>
+                  <div class="font-body text-xs" style="color:#64748b;">iOS/Android strategy &amp; design</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Complete SaaS Integration</div>
+                  <div class="font-body text-xs" style="color:#64748b;">HubSpot, Klaviyo, automation tools</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Dedicated Account Manager</div>
+                  <div class="font-body text-xs" style="color:#64748b;">White-glove service &amp; support</div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105"
+               style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
+              Discuss Your Needs
+            </a>
+            <p id="enterprise-timeline" class="text-center font-body text-xs mt-4" style="color:#64748b;">Delivery: 8+ weeks</p>
+          </div>
+        </div>
+
+        <!-- ROI Guarantee -->
+        <div class="max-w-4xl mx-auto p-8 rounded-2xl" style="background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); border: 2px solid #f59e0b;">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style="background:white;">
+              <span class="text-3xl">🛡️</span>
+            </div>
+            <div>
+              <h3 id="guarantee-headline" class="font-heading text-2xl font-bold mb-3" style="color:#92400e;">Performance Guarantee</h3>
+              <p id="guarantee-description" class="font-body text-base leading-relaxed mb-4" style="color:#78350f;">
+                If your campaigns don't achieve at least 2.5x ROAS within 90 days of launch, I'll work with you for free until they do. Your success is my success.
+              </p>
+              <div class="flex flex-wrap gap-6 text-sm font-body font-semibold" style="color:#92400e;">
+                <div class="flex items-center gap-2">
+                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>90-Day Guarantee</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>2.5x ROAS Minimum</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span>Risk-Free Investment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <p class="font-body text-sm mb-4" style="color:#64748b;">💳 Flexible payment plans available • Bank transfer &amp; card accepted</p>
+          <p class="font-body text-xs" style="color:#94a3b8;">All prices in GBP. VAT may apply for UK clients.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Results -->
+    <section id="results" class="py-24 px-6" style="background:#f8fafc;">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Proven Results</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Real Impact for Real Businesses</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="text-6xl mb-4">📈</div>
+            <div class="font-heading text-4xl font-bold mb-2 stat-number">3.5x</div>
+            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">ROAS Increase</div>
+            <p class="font-body text-sm" style="color:#64748b;">Meta &amp; TikTok campaigns for D2C brands</p>
+          </div>
+
+          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="text-6xl mb-4">💌</div>
+            <div class="font-heading text-4xl font-bold mb-2 stat-number">85%</div>
+            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Higher Engagement</div>
+            <p class="font-body text-sm" style="color:#64748b;">Email campaigns with custom designs &amp; layouts</p>
+          </div>
+
+          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="text-6xl mb-4">⚡</div>
+            <div class="font-heading text-4xl font-bold mb-2 stat-number">10x</div>
+            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Faster Production</div>
+            <p class="font-body text-sm" style="color:#64748b;">AI automation pipeline for ad creative</p>
+          </div>
+
+          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="text-6xl mb-4">🎯</div>
+            <div class="font-heading text-4xl font-bold mb-2 stat-number">100%</div>
+            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Client Satisfaction</div>
+            <p class="font-body text-sm" style="color:#64748b;">Unlimited revisions on all projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Client Testimonials</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Trusted by Industry Leaders</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start gap-1 mb-4">
+              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
+            </div>
+            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
+              "Mohit transformed our ad performance completely. His data-driven approach and creative expertise delivered a 3.5x ROAS increase within 3 months. Outstanding work!"
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#dbeafe;">👨‍💼</div>
+              <div>
+                <div class="font-heading text-base font-bold" style="color:#0f172a;">James Wilson</div>
+                <div class="font-body text-sm" style="color:#64748b;">Marketing Director, UK Fashion Co.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start gap-1 mb-4">
+              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
+            </div>
+            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
+              "The Shopify store Mohit built for us is not only beautiful but converts incredibly well. Sales increased by 250% in the first quarter. Highly recommended!"
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#fed7aa;">👩‍💼</div>
+              <div>
+                <div class="font-heading text-base font-bold" style="color:#0f172a;">Sarah Ahmed</div>
+                <div class="font-body text-sm" style="color:#64748b;">CEO, UAE Beauty Brand</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start gap-1 mb-4">
+              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
+            </div>
+            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
+              "His AI automation setup revolutionized our creative workflow. We now produce 10x more content without compromising quality. Game changer for our agency!"
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#dbeafe;">👨‍💻</div>
+              <div>
+                <div class="font-heading text-base font-bold" style="color:#0f172a;">Michael Chen</div>
+                <div class="font-body text-sm" style="color:#64748b;">Founder, Digital Marketing Agency</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start gap-1 mb-4">
+              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
+            </div>
+            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
+              "Professional, responsive, and results-driven. Mohit understands both creative excellence and business objectives. A rare combination in the industry."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#fed7aa;">👩‍💼</div>
+              <div>
+                <div class="font-heading text-base font-bold" style="color:#0f172a;">Emma Rodriguez</div>
+                <div class="font-body text-sm" style="color:#64748b;">VP Marketing, B2B SaaS</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Summary -->
+    <section class="py-24 px-6" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-heading text-5xl font-bold mb-6 text-white">Profile Summary</h2>
+        </div>
+
+        <div class="p-8 rounded-2xl mb-12" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+          <p id="profile-summary" class="font-body text-lg leading-relaxed text-white" style="opacity:0.95;">
+            Creative Brand Strategist and Gen-AI Enabler with 10+ years of experience across e-commerce, cinematic content production, and AI-assisted creative workflows. Proven expertise in delivering data-driven campaigns with 3.5x ROAS for 50+ D2C and B2B brands. Specializing in video production, brand direction, e-commerce development, and performance marketing automation. Combining artistic excellence with technical proficiency in Adobe Creative Suite, Shopify, AI automation tools, and analytics platforms to drive measurable business results.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
+                <span class="text-2xl">🎓</span>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-white">Education</h3>
+            </div>
+            <div id="education-text" class="font-body text-base leading-relaxed text-white" style="opacity:0.9;">
+              Bachelor's Degree in Media Production &amp; Digital Marketing<br/>
+              Specialized certifications in Adobe Creative Suite, Shopify Development, and Gen-AI Automation
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
+                <span class="text-2xl">⭐</span>
+              </div>
+              <h3 class="font-heading text-2xl font-bold text-white">Core Skills</h3>
+            </div>
+            <div class="space-y-2 text-white font-body text-base" style="opacity:0.9;">
+              <div>• Video Production &amp; Post-Production</div>
+              <div>• Brand Strategy &amp; Creative Direction</div>
+              <div>• E-Commerce Development (Shopify)</div>
+              <div>• Performance Marketing &amp; Ad Creative</div>
+              <div>• Gen-AI Workflow Automation</div>
+              <div>• Analytics &amp; Data-Driven Optimization</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
+              <span class="text-2xl">🏆</span>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white">Key Achievements</h3>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 text-white font-body text-base" style="opacity:0.9;">
+            <div>✓ Delivered 3.5x average ROAS for 50+ D2C and B2B clients</div>
+            <div>✓ Completed 500+ creative projects across multiple industries</div>
+            <div>✓ Increased email engagement by 85% through custom EDM designs</div>
+            <div>✓ Achieved 10x faster creative production via AI automation</div>
+            <div>✓ Built and launched 30+ high-converting Shopify stores</div>
+            <div>✓ Collaborated with award-winning directors on commercial projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Get Started Today</span>
+          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Ready to Transform Your Brand?</h2>
+          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">Book a free 30-minute consultation to discuss your project goals and explore how we can work together</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <!-- Email -->
+          <a href="mailto:mohitparmar110@gmail.com" class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
+            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+              <svg class="w-7 h-7" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Email</div>
+            <div id="contact-email" class="font-body text-sm" style="color:#64748b;">mohitparmar110@gmail.com</div>
+          </a>
+
+          <!-- Phone -->
+          <div class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
+            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
+              <svg class="w-7 h-7" style="color:#ea580c;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Phone</div>
+            <div id="contact-phone" class="font-body text-sm" style="color:#64748b;">+91 9372857140</div>
+          </div>
+
+          <!-- Location -->
+          <div class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
+            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
+              <svg class="w-7 h-7" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Location</div>
+            <div id="contact-location" class="font-body text-sm" style="color:#64748b;">UK &amp; UAE</div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="mailto:mohitparmar110@gmail.com"
+             class="cta-button inline-block px-12 py-5 rounded-lg font-body text-lg font-bold text-white shadow-2xl"
+             style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+            Schedule Free Consultation
+          </a>
+          <p class="font-body text-sm mt-4" style="color:#64748b;">⚡ Limited availability - Book your slot today</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6" style="background:#0f172a;">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+          <div class="text-center md:text-left">
+            <div class="font-heading text-2xl font-bold mb-2 text-white">Mohit Dheeraj Parmar</div>
+            <div class="font-body text-sm" style="color:#94a3b8;">Creative Brand Strategist &amp; Gen-AI Enabler</div>
+          </div>
+
+          <div class="flex gap-4">
+            <!-- LinkedIn -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+               style="background: rgba(255,255,255,0.1);">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+               style="background: rgba(255,255,255,0.1);">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.25 1.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+               style="background: rgba(255,255,255,0.1);">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.5 6.2s-.23-1.63-.95-2.35c-.91-.95-1.93-.95-2.4-1.01C16.77 2.5 12 2.5 12 2.5h-.01s-4.77 0-8.14.34c-.47.06-1.49.06-2.4 1.01C.73 4.57.5 6.2.5 6.2S.16 8.12.16 10.04v1.92c0 1.92.34 3.84.34 3.84s.23 1.63.95 2.35c.91.95 2.1.92 2.63 1.02 1.91.18 8.12.33 8.12.33s4.77-.01 8.14-.35c.47-.06 1.49-.06 2.4-1.01.72-.72.95-2.35.95-2.35s.34-1.92.34-3.84v-1.92c0-1.92-.34-3.84-.34-3.84zM9.75 14.02V7.98l6.27 3.02-6.27 3.02z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="font-body text-sm" style="color:#94a3b8;">
+            © <span id="year"></span> Mohit Parmar. All rights reserved.
+          </div>
+          <div class="font-body text-sm" style="color:#94a3b8;">
+            Built with Tailwind • Designed for performance &amp; conversions
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JS: Carousel + helpers -->
+  <script>
+    (function () {
+      // Footer year
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Carousel
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const indicators = document.getElementById("carousel-indicators");
+
+      if (!track || !prevBtn || !nextBtn || !indicators) return;
+
+      const slides = Array.from(track.children);
+      let index = 0;
+
+      function itemsPerView() {
+        const w = window.innerWidth;
+        if (w >= 1024) return 3;
+        if (w >= 768) return 2;
+        return 1;
+      }
+
+      function totalPages() {
+        return Math.max(1, Math.ceil(slides.length / itemsPerView()));
+      }
+
+      function clampIndex(i) {
+        const pages = totalPages();
+        if (i < 0) return pages - 1;
+        if (i >= pages) return 0;
+        return i;
+      }
+
+      function slideWidth() {
+        // width of one "page" = container width
+        const container = document.getElementById("carousel-container");
+        return container ? container.clientWidth : window.innerWidth;
+      }
+
+      function buildIndicators() {
+        indicators.innerHTML = "";
+        const pages = totalPages();
+
+        for (let i = 0; i < pages; i++) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "w-2.5 h-2.5 rounded-full transition-all";
+          dot.style.background = i === index ? "#1e3a8a" : "rgba(30,58,138,0.25)";
+          dot.style.transform = i === index ? "scale(1.2)" : "scale(1)";
+          dot.addEventListener("click", () => {
+            index = i;
+            render();
+          });
+          indicators.appendChild(dot);
+        }
+      }
+
+      function updateIndicators() {
+        const dots = Array.from(indicators.children);
+        dots.forEach((d, i) => {
+          d.style.background = i === index ? "#1e3a8a" : "rgba(30,58,138,0.25)";
+          d.style.transform = i === index ? "scale(1.2)" : "scale(1)";
+        });
+      }
+
+      function render() {
+        index = clampIndex(index);
+        const x = index * slideWidth();
+        track.style.transform = `translateX(-${x}px)`;
+        buildIndicators();
+        updateIndicators();
+      }
+
+      prevBtn.addEventListener("click", () => { index--; render(); });
+      nextBtn.addEventListener("click", () => { index++; render(); });
+
+      // Keep the track aligned on resize
+      let resizeTimer = null;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          index = clampIndex(index);
+          render();
+        }, 80);
+      });
+
+      // Initial
+      render();
+    })();
+  </script>
+</body>
+</html>
