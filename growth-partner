@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohit Parmar Growth Partners | Revenue Infrastructure Engineers</title>
+    <meta name="description" content="We build the revenue infrastructure for high-growth B2B & D2C brands. Engineering as marketing, programmatic SEO, and conversion systems." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js for Data Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts: Inter for UI, Space Grotesk for Headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky blue accent
+                            600: '#0284c7',
+                            900: '#0c4a6e', // Deep Navy
+                            dark: '#0f172a', // Slate 900
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        body {
+            background-color: #f8fafc; /* Slate 50 */
+            color: #0f172a; /* Slate 900 */
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        /* Hero Animation Canvas */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .bento-card {
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+    
+    <!-- Placeholder Comments -->
+    <!-- Chosen Palette: Slate (Professional/Neutral) + Sky Blue (Trust/Tech) -->
+    <!-- Application Structure Plan:
+         1. Hero: "Institutional Authority" positioning with interactive particle network to signal tech mastery.
+         2. Problem/Solution (The Shift): Educational section contrasting "Freelancer" (Old) vs "Growth Partner" (New).
+         3. Engineering as Marketing (Interactive Tool): A live "Revenue Leakage Calculator" to demonstrate the "Productized Service" approach.
+         4. Service Pillars: 3-step methodology (Infrastructure, Authority, Scale).
+         5. Bento Grid Portfolio: Replacing the carousel with a dense, Apple-style grid showcasing data outcomes.
+         6. Pricing: Retainer models (Maintenance to Partner).
+         7. Triage/Contact: Qualification-focused form.
+    -->
+    <!-- Visualization & Content Choices:
+         1. Hero Canvas: Particles representing "Network/Infrastructure". Goal: Tech Authority.
+         2. Revenue Calculator: Chart.js Bar Chart. Goal: Visualize the cost of inaction (Loss Aversion).
+         3. Bento Grid: CSS Grid. Goal: Show multi-faceted expertise (Design + Data) concisely.
+         4. Timeline: Vertical Layout. Goal: Reframe "Freelance Years" as "R&D Phase".
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used (except small UI icons inline). NO Mermaid JS used. -->
+
+</head>
+<body class="antialiased font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-900 rounded-lg flex items-center justify-center text-white font-display font-bold text-xl">
+                    MP
+                </div>
+                <div>
+                    <div class="font-display font-bold text-brand-900 leading-tight">MOHIT PARMAR</div>
+                    <div class="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Growth Partners</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#methodology" class="hover:text-brand-600 transition-colors">Methodology</a>
+                <a href="#tools" class="hover:text-brand-600 transition-colors">Tools</a>
+                <a href="#results" class="hover:text-brand-600 transition-colors">Results</a>
+                <a href="#pricing" class="hover:text-brand-600 transition-colors">Retainers</a>
+            </div>
+
+            <a href="#triage" class="px-6 py-2.5 bg-brand-900 text-white text-sm font-semibold rounded-lg hover:bg-brand-800 transition-colors shadow-lg shadow-brand-900/20">
+                Book Strategy Call
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Institutional Authority -->
+    <header class="relative pt-32 pb-20 overflow-hidden bg-slate-50">
+        <canvas id="hero-canvas"></canvas>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-600 text-xs font-bold tracking-wide uppercase mb-6 animate-fade-in-up">
+                    <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                    Now Accepting Q1 Partners
+                </div>
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    Stop Renting Your Growth. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Start Engineering It.</span>
+                </h1>
+                <p class="text-xl text-slate-600 max-w-2xl leading-relaxed mb-10 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    We don't just "do SEO" or "build websites." We deploy enterprise-grade <strong>Revenue Infrastructure</strong> for high-growth B2B & D2C brands. From programmatic organic scaling to conversion-focused Next.js architecture.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <button onclick="document.getElementById('tools').scrollIntoView()" class="px-8 py-4 bg-brand-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                        Audit Your Infrastructure
+                    </button>
+                    <button onclick="document.getElementById('results').scrollIntoView()" class="px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:bg-slate-50 transition-all hover:border-slate-300">
+                        View Case Studies
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Proof Ticker -->
+        <div class="mt-20 border-y border-slate-200 bg-white/50 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-6 py-6">
+                <p class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Trusted Infrastructure For</p>
+                <div class="flex flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="text-lg font-display font-bold text-slate-800">TechFlow SaaS</div>
+                    <div class="text-lg font-display font-bold text-slate-800">Apex Realty</div>
+                    <div class="text-lg font-display font-bold text-slate-800">Lumina D2C</div>
+                    <div class="text-lg font-display font-bold text-slate-800">VentureNorth</div>
+                    <div class="text-lg font-display font-bold text-slate-800">ScaleUp Partners</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Shift: Education Section -->
+    <section id="methodology" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-4xl font-bold text-slate-900 mb-6">The "Freelancer" Model is Broken. <br>Welcome to Growth Partnership.</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Most businesses hire "doers" – a web dev for code, an SEO for keywords, a designer for logos. The result? Disconnected systems that don't talk to each other and fail to generate revenue.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        We operate differently. We are <strong>Architects of Outcome</strong>. We align technical engineering with financial goals.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">X</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">The Old Way (Commodity)</h4>
+                                <p class="text-sm text-slate-500">"I built you a WordPress site. Good luck."</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-50 border border-brand-100 relative overflow-hidden">
+                            <div class="absolute inset-y-0 left-0 w-1 bg-brand-500"></div>
+                            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">✓</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">The Growth Partner Way (Asset)</h4>
+                                <p class="text-sm text-slate-500">"We engineered a Next.js system that captures leads, automates follow-up, and guarantees 20% faster load times."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bento Grid Visualization of the "Stack" -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900 p-6 rounded-2xl text-white col-span-2">
+                        <div class="text-xs text-slate-400 uppercase tracking-widest mb-2">Core Core</div>
+                        <div class="font-display text-2xl font-bold mb-2">Revenue Infrastructure</div>
+                        <p class="text-slate-400 text-sm">The central nervous system of your business growth.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <h3 class="font-bold text-slate-900">Velocity</h3>
+                        <p class="text-xs text-slate-500 mt-1">Sub-second load times via Edge Networks.</p>
+                    </div>
+                    <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                        <div class="text-3xl mb-2">🤖</div>
+                        <h3 class="font-bold text-slate-900">Automation</h3>
+                        <p class="text-xs text-slate-500 mt-1">0-touch lead nurturing & data entry.</p>
+                    </div>
+                    <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 col-span-2">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-3xl mb-2">📈</div>
+                                <h3 class="font-bold text-slate-900">Programmatic Scale</h3>
+                                <p class="text-xs text-slate-500 mt-1">Targeting 1,000+ long-tail keywords dynamically.</p>
+                            </div>
+                            <div class="text-3xl font-display font-bold text-emerald-600">+350%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering as Marketing: Interactive Tool -->
+    <section id="tools" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-block px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-500 text-xs font-bold uppercase tracking-wide mb-4">Engineering as Marketing</div>
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Are You Leaking Revenue?</h2>
+                <p class="text-slate-600">
+                    We build tools like this for our clients to generate leads. Try it yourself. See how much organic traffic value you might be missing by relying on manual SEO vs. Programmatic Infrastructure.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 lg:p-12">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Average Customer Value (LTV)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+                                <input type="number" id="ltv" value="1500" class="w-full pl-8 pr-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all font-mono text-slate-700">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Target Long-Tail Keywords</label>
+                            <p class="text-xs text-slate-400 mb-2">How many city/service variations exist? (e.g. "Dentist in Austin", "Dentist in Dallas")</p>
+                            <input type="range" id="keywords" min="50" max="2000" step="50" value="500" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                            <div class="text-right text-brand-600 font-bold font-mono mt-1"><span id="keywords-val">500</span> pages</div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Current Conversion Rate</label>
+                            <input type="range" id="conv-rate" min="0.5" max="5" step="0.1" value="1.5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                            <div class="text-right text-brand-600 font-bold font-mono mt-1"><span id="conv-val">1.5</span>%</div>
+                        </div>
+                        
+                        <div class="pt-6 border-t border-slate-100">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-slate-600 font-medium">Potential Monthly Revenue:</span>
+                                <span class="text-2xl font-bold text-slate-900 font-mono" id="potential-rev">$0</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 text-sm">Annual Opportunity Cost:</span>
+                                <span class="text-lg font-bold text-red-500 font-mono" id="annual-loss">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualization -->
+                    <div class="flex flex-col justify-center items-center bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                        <h4 class="text-sm font-bold text-slate-900 mb-4 w-full text-left">Revenue Projection Comparison</h4>
+                        <div class="chart-container">
+                            <canvas id="opportunityChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-slate-400 mt-4">
+                            *Projections based on conservative 10 visits/page monthly average.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results: Bento Grid -->
+    <section id="results" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Outcomes Over Outputs</h2>
+                <p class="text-slate-600 max-w-2xl">We don't showcase "pretty screenshots." We showcase the metrics that matter to your board members.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+                
+                <!-- Main Feature -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-slate-900 rounded-3xl p-8 relative overflow-hidden group bento-card">
+                    <div class="relative z-10 h-full flex flex-col justify-between">
+                        <div>
+                            <div class="text-brand-400 font-bold tracking-widest text-xs uppercase mb-2">D2C Fashion Brand</div>
+                            <h3 class="text-3xl font-display font-bold text-white mb-4">3.5x ROAS Scaling</h3>
+                            <p class="text-slate-400 leading-relaxed max-w-md">Rebuilt the entire Shopify frontend with Headless Next.js, reducing load times by 40%. Implemented server-side tracking for Meta Ads.</p>
+                        </div>
+                        <div class="flex gap-4 mt-8">
+                            <div class="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/10">
+                                <div class="text-2xl font-bold text-white">40%</div>
+                                <div class="text-xs text-slate-400">Faster Load</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/10">
+                                <div class="text-2xl font-bold text-white">$1.2M</div>
+                                <div class="text-xs text-slate-400">Added Rev</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Graphic -->
+                    <div class="absolute right-0 bottom-0 w-64 h-64 bg-brand-600/20 rounded-full blur-3xl group-hover:bg-brand-600/30 transition-all"></div>
+                </div>
+
+                <!-- Stat Card 1 -->
+                <div class="col-span-1 bg-blue-50 rounded-3xl p-8 flex flex-col justify-center bento-card border border-blue-100">
+                    <div class="text-5xl font-display font-bold text-blue-600 mb-2">10x</div>
+                    <p class="text-slate-700 font-medium">Faster Content Production</p>
+                    <p class="text-xs text-slate-500 mt-2">Via AI Automation Workflows</p>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="col-span-1 bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-center bento-card">
+                    <div class="text-5xl font-display font-bold text-emerald-600 mb-2">90%</div>
+                    <p class="text-slate-700 font-medium">Core Web Vitals Pass Rate</p>
+                    <p class="text-xs text-slate-500 mt-2">Google Performance Score</p>
+                </div>
+
+                <!-- Tall Card -->
+                <div class="col-span-1 md:col-span-1 row-span-2 bg-slate-100 rounded-3xl p-8 bento-card relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    <div class="relative z-10">
+                        <div class="text-slate-500 text-xs font-bold uppercase mb-4">The Stack</div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-2 h-2 rounded-full bg-black"></span> Next.js 14</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-2 h-2 rounded-full bg-black"></span> Tailwind CSS</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-2 h-2 rounded-full bg-black"></span> Supabase</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-2 h-2 rounded-full bg-black"></span> OpenAI API</li>
+                            <li class="flex items-center gap-2 text-slate-700"><span class="w-2 h-2 rounded-full bg-black"></span> Vercel Edge</li>
+                        </ul>
+                        <div class="mt-8 pt-8 border-t border-slate-200">
+                            <div class="font-bold text-slate-900">Tech Agnostic</div>
+                            <p class="text-xs text-slate-500 mt-1">We choose the tool that prints money, not the one that's trending.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wide Card -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-2 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-3xl p-8 text-white bento-card">
+                    <h3 class="text-xl font-bold mb-2">Programmatic SEO Dominance</h3>
+                    <p class="text-indigo-100 text-sm mb-6">Case Study: B2B SaaS in Real Estate</p>
+                    <div class="w-full bg-white/10 h-2 rounded-full mb-4 overflow-hidden">
+                        <div class="h-full bg-white w-[85%]"></div>
+                    </div>
+                    <div class="flex justify-between text-xs font-mono">
+                        <span>0 Keywords</span>
+                        <span>5,000+ Keywords Ranked</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Retainers -->
+    <section id="pricing" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-slate-900 mb-4">Invest in Asset Architecture</h2>
+                <p class="text-slate-600">We operate on a retainer model to ensure continuous optimization and infrastructure health.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Maintenance -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="text-slate-500 font-bold text-sm uppercase tracking-wider mb-2">Maintenance</div>
+                    <div class="text-3xl font-display font-bold text-slate-900 mb-6">$1,500<span class="text-lg text-slate-400 font-normal">/mo</span></div>
+                    <p class="text-sm text-slate-600 mb-8 h-12">For brands that have infrastructure but need guaranteed uptime and security.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-700">
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Vercel/AWS Hosting Management</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Weekly Security Patches</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Uptime Monitoring (24/7)</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> 2 Hrs Dev/Mo</li>
+                    </ul>
+                    <a href="#triage" class="block text-center w-full py-3 rounded-xl border border-slate-200 font-semibold hover:bg-slate-50">Secure Your Stack</a>
+                </div>
+
+                <!-- Growth -->
+                <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-white relative transform md:-translate-y-4 shadow-2xl">
+                    <div class="absolute top-0 right-0 bg-brand-600 text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">POPULAR</div>
+                    <div class="text-brand-400 font-bold text-sm uppercase tracking-wider mb-2">Growth Partner</div>
+                    <div class="text-3xl font-display font-bold text-white mb-6">$5,000<span class="text-lg text-slate-400 font-normal">/mo</span></div>
+                    <p class="text-sm text-slate-300 mb-8 h-12">For ambitious brands scaling traffic and needing continuous experimentation.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-300">
+                        <li class="flex gap-3"><span class="text-brand-400">✓</span> <strong>Everything in Maintenance</strong></li>
+                        <li class="flex gap-3"><span class="text-brand-400">✓</span> Programmatic SEO (4 pages/mo)</li>
+                        <li class="flex gap-3"><span class="text-brand-400">✓</span> Conversion Rate Optimization Tests</li>
+                        <li class="flex gap-3"><span class="text-brand-400">✓</span> Monthly Strategy Deep Dive</li>
+                        <li class="flex gap-3"><span class="text-brand-400">✓</span> Custom Reporting Dashboard</li>
+                    </ul>
+                    <a href="#triage" class="block text-center w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 font-semibold transition-colors">Apply for Partnership</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all">
+                    <div class="text-slate-500 font-bold text-sm uppercase tracking-wider mb-2">Fractional CTO/CMO</div>
+                    <div class="text-3xl font-display font-bold text-slate-900 mb-6">$10k+<span class="text-lg text-slate-400 font-normal">/mo</span></div>
+                    <p class="text-sm text-slate-600 mb-8 h-12">Full strategic oversight. We become your internal growth engineering team.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-700">
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> <strong>Everything in Growth</strong></li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Weekly Executive Calls</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Vendor Management</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Unlimited Dev Implementation</li>
+                        <li class="flex gap-3"><span class="text-green-500">✓</span> Data Warehouse Setup</li>
+                    </ul>
+                    <a href="#triage" class="block text-center w-full py-3 rounded-xl border border-slate-200 font-semibold hover:bg-slate-50">Contact for Scope</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Triage Protocol (Contact) -->
+    <section id="triage" class="py-24 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200">
+                <div class="text-center mb-10">
+                    <h2 class="font-display text-3xl font-bold text-slate-900 mb-4">Application for Partnership</h2>
+                    <p class="text-slate-600">
+                        We limit our active roster to 5 partners to ensure executive-level focus. <br>
+                        Please complete the triage form below to see if we are a technical fit.
+                    </p>
+                </div>
+
+                <form id="triage-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Founder Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Company URL</label>
+                            <input type="url" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none" placeholder="https://">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Current Monthly Revenue</label>
+                        <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none bg-white">
+                            <option>Pre-Revenue (Not a fit currently)</option>
+                            <option>$10k - $50k</option>
+                            <option>$50k - $200k</option>
+                            <option>$200k+</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Primary Bottleneck</label>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-brand-500 bg-white">
+                                <input type="radio" name="bottleneck" class="accent-brand-600">
+                                <span class="text-sm text-slate-700">Traffic (Need more eyes)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-brand-500 bg-white">
+                                <input type="radio" name="bottleneck" class="accent-brand-600">
+                                <span class="text-sm text-slate-700">Conversion (Traffic isn't buying)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-brand-500 bg-white">
+                                <input type="radio" name="bottleneck" class="accent-brand-600">
+                                <span class="text-sm text-slate-700">Tech/Speed (Site is slow/broken)</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-brand-500 bg-white">
+                                <input type="radio" name="bottleneck" class="accent-brand-600">
+                                <span class="text-sm text-slate-700">All of the above</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="alert('Thank you. Your application has been routed to our triage team. If your revenue criteria matches our partnership model, you will receive a calendar link within 24 hours.')" class="w-full py-4 bg-brand-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors shadow-lg">
+                        Submit Application
+                    </button>
+                    <p class="text-center text-xs text-slate-400 mt-4">
+                        By submitting, you agree to our privacy policy. We respect your inbox zero.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="font-display font-bold text-2xl mb-4">MOHIT PARMAR</div>
+                <p class="text-slate-400 max-w-sm mb-6">
+                    Engineering revenue infrastructure for the modern internet. Based in UK & UAE, serving global enterprises.
+                </p>
+                <div class="flex gap-4">
+                    <!-- Socials Placeholders -->
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 transition-colors">in</a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-600 transition-colors">x</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Services</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Programmatic SEO</a></li>
+                    <li><a href="#" class="hover:text-white">Headless Commerce</a></li>
+                    <li><a href="#" class="hover:text-white">Conversion Audits</a></li>
+                    <li><a href="#" class="hover:text-white">Fractional CTO</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Legal</h4>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-white">SLA Agreements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            &copy; <script>document.write(new Date().getFullYear())</script> Mohit Parmar Growth Partners. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. Particle Network Animation (Hero Canvas) ---
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = document.querySelector('header').offsetHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.fillStyle = '#cbd5e1'; // Slate 300
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(Math.floor(window.innerWidth / 10), 100);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw Connections
+            ctx.strokeStyle = 'rgba(203, 213, 225, 0.3)'; // Slate lines
+            ctx.lineWidth = 0.5;
+            
+            for (let i = 0; i < particles.length; i++) {
+                let p1 = particles[i];
+                p1.update();
+                p1.draw();
+                
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => { resize(); initParticles(); });
+        resize();
+        initParticles();
+        animate();
+
+
+        // --- 2. Calculator Logic & Chart.js ---
+        const ltvInput = document.getElementById('ltv');
+        const keywordsInput = document.getElementById('keywords');
+        const keywordsVal = document.getElementById('keywords-val');
+        const convInput = document.getElementById('conv-rate');
+        const convVal = document.getElementById('conv-val');
+        const potentialRevDisplay = document.getElementById('potential-rev');
+        const annualLossDisplay = document.getElementById('annual-loss');
+
+        // Chart Initialization
+        const ctxChart = document.getElementById('opportunityChart').getContext('2d');
+        let oppChart = new Chart(ctxChart, {
+            type: 'bar',
+            data: {
+                labels: ['Current (Manual SEO)', 'Potential (Programmatic)'],
+                datasets: [{
+                    label: 'Monthly Revenue ($)',
+                    data: [0, 0],
+                    backgroundColor: ['#cbd5e1', '#0ea5e9'], // Slate vs Brand Blue
+                    borderRadius: 8,
+                    barThickness: 50
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#f1f5f9' },
+                        ticks: {
+                            callback: function(value) { return '$' + value/1000 + 'k'; }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        function updateCalculator() {
+            // Get Values
+            const ltv = parseFloat(ltvInput.value) || 0;
+            const keywords = parseInt(keywordsInput.value) || 0;
+            const convRate = parseFloat(convInput.value) || 0;
+
+            // Update UI Labels
+            keywordsVal.innerText = keywords;
+            convVal.innerText = convRate;
+
+            // Calculations
+            // Assumption: 10 visits per programmatic page per month (conservative)
+            const trafficPerKey = 10; 
+            const totalTraffic = keywords * trafficPerKey;
+            
+            // Monthly Revenue = Traffic * (ConvRate / 100) * LTV
+            const monthlyRev = Math.round(totalTraffic * (convRate / 100) * ltv);
+            const currentRev = Math.round(monthlyRev * 0.05); // Assume manual SEO captures 5% of potential
+
+            // Annual Loss
+            const annualLoss = (monthlyRev - currentRev) * 12;
+
+            // Update Displays
+            potentialRevDisplay.innerText = '$' + monthlyRev.toLocaleString();
+            annualLossDisplay.innerText = '$' + annualLoss.toLocaleString();
+
+            // Update Chart
+            oppChart.data.datasets[0].data = [currentRev, monthlyRev];
+            oppChart.update();
+        }
+
+        // Listeners
+        [ltvInput, keywordsInput, convInput].forEach(el => {
+            el.addEventListener('input', updateCalculator);
+        });
+
+        // Initial Run
+        updateCalculator();
+
+    </script>
+</body>
+</html>
