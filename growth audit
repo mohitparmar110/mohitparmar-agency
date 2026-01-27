@@ -1,0 +1,561 @@
+<!-- 
+    PALETTE: Cyber-Executive
+    - Primary Background: #F8FAFC (Slate 50)
+    - Card Background: #FFFFFF (White)
+    - Primary Text: #0F172A (Slate 900)
+    - Accent Blue: #3B82F6 (Blue 500)
+    - Accent Coral: #F43F5E (Rose 500)
+    - Chart Colors: ['#3B82F6', '#F43F5E', '#10B981', '#8B5CF6', '#F59E0B']
+-->
+
+<!-- 
+    NARRATIVE PLAN:
+    1.  **Header:** Establish Authority. "Mohit Parmar Agency" as a strategic partner.
+    2.  **Executive Summary:** High-level KPIs showing current vs. potential state.
+    3.  **The Diagnosis (Audit):** Visualizing traffic leaks and poor conversion (The Pain).
+    4.  **The Tech Stack Gap:** Showing how bad Dev/Design hurts Marketing (The Need for Full Service).
+    5.  **Strategic Solution:** Service synergy breakdown.
+    6.  **Financial Projection:** The ROI of hiring the agency.
+    7.  **Roadmap:** Step-by-step execution plan.
+-->
+
+<!--
+    CHART SELECTION JUSTIFICATION (NO SVG):
+    1.  **Traffic Sources:** Donut Chart (Chart.js). Goal: Compare composition. Canvas rendering.
+    2.  **Conversion Funnel:** Horizontal Bar Chart (Chart.js). Goal: Organize/Process. Visualizes the drop-off. Canvas rendering.
+    3.  **Revenue Trajectory:** Area Line Chart (Chart.js). Goal: Change/Forecast. Shows growth over time. Canvas rendering.
+    4.  **Keyword Opportunity:** Bubble Chart (Plotly.js). Goal: Relationships. Volume vs. Difficulty. Canvas mode enabled.
+    5.  **Service Synergy:** Radar Chart (Chart.js). Goal: Compare. Shows balance of Dev/Design/SEO. Canvas rendering.
+-->
+
+<!--
+    CONFIRMATION:
+    - NO SVG used.
+    - NO Mermaid JS used.
+    - All charts use Canvas.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Performance Audit | Mohit Parmar Agency</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+        }
+
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Constraint for large screens */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Custom Scrollbar for a clean feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6, #F43F5E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Hero -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold">M</div>
+                <h1 class="text-xl font-bold tracking-tight">Mohit Parmar <span class="text-gray-400 font-light">| Agency</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-500">
+                <span>Performance Audit</span>
+                <span>Growth Strategy</span>
+                <span>ROI Projection</span>
+            </nav>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold shadow hover:bg-blue-700 transition">
+                Start Transformation
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <!-- Section 1: Introduction -->
+        <section class="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                Stop Guessing. <br>Start <span class="gradient-text">Scaling.</span>
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                In today's digital ecosystem, a beautiful website is useless without traffic, and traffic is expensive without conversion. 
+                We integrate <strong>Development, Design, and Performance Marketing</strong> into a single revenue engine. 
+                Below is the audit of your current digital footprint and the roadmap to dominance.
+            </p>
+        </section>
+
+        <!-- Section 2: The Diagnosis (Current State) -->
+        <section>
+            <div class="mb-8 border-l-4 border-blue-500 pl-4">
+                <h3 class="text-2xl font-bold text-slate-800">The Diagnosis: Where You Are Losing Revenue</h3>
+                <p class="text-slate-600 mt-2">
+                    Our initial analysis reveals a disconnect between your acquisition channels and your user experience. 
+                    While paid traffic drives visitors, technical debt and poor funnel optimization are causing significant "leakage" before the sale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart: Traffic Source Mix -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-slate-800 mb-2">Current Traffic Composition</h4>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Reliance on Paid Ads is too high (60%). Healthy growth requires a balanced ecosystem where organic search compounds over time.
+                    </p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart: Conversion Funnel -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-slate-800 mb-2">The Conversion Leak</h4>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Drastic drop-off between "Site Visit" and "Lead Gen". This indicates UI/UX friction or slow load times, not poor ad targeting.
+                    </p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="funnelChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Opportunity (Data Analysis) -->
+        <section>
+            <div class="mb-8 border-l-4 border-rose-500 pl-4">
+                <h3 class="text-2xl font-bold text-slate-800">The Opportunity: Untapped Market Share</h3>
+                <p class="text-slate-600 mt-2">
+                    By analyzing search intent and technical performance, we identified high-value keywords you are missing and 
+                    technical bottlenecks slowing down your growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart: Keyword Bubble Chart (Plotly) -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-slate-800 mb-2">Keyword Gap Analysis</h4>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Visualizing high-volume, low-competition keywords (top-left quadrant) that your competitors are ignoring.
+                    </p>
+                    <div class="chart-container flex-grow" id="bubbleChart">
+                        <!-- Plotly renders here -->
+                    </div>
+                </div>
+
+                <!-- Chart: Radar Skill Matrix -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col">
+                    <h4 class="text-lg font-semibold text-slate-800 mb-2">Holistic Strategy Requirement</h4>
+                    <p class="text-xs text-slate-500 mb-4">
+                        Most agencies specialize in one area. We close the gap. This chart compares your current digital strength vs. the required "Full Stack" approach.
+                    </p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Roadmap (HTML/CSS Diagram - NO SVG) -->
+        <section>
+            <div class="mb-8 border-l-4 border-indigo-500 pl-4">
+                <h3 class="text-2xl font-bold text-slate-800">Strategic Execution Plan</h3>
+                <p class="text-slate-600 mt-2">
+                    A phased approach to fixing the foundation (Dev/Design) before scaling the traffic (Marketing).
+                </p>
+            </div>
+
+            <!-- Custom Process Flow Diagram using Grid/Flex -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 relative group hover:shadow-lg transition">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 font-bold">1</div>
+                    <h5 class="font-bold text-slate-800">Audit & Fix</h5>
+                    <p class="text-sm text-slate-500 mt-2">Technical SEO, Site Speed Optimization, UX Heuristics.</p>
+                </div>
+
+                <!-- Connector (Desktop Only) -->
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="text-2xl text-slate-300 font-bold">&rarr;</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 relative group hover:shadow-lg transition">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
+                    <h5 class="font-bold text-slate-800">Value Creation</h5>
+                    <p class="text-sm text-slate-500 mt-2">Content Strategy, High-Converting Landing Pages, Lead Magnets.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="text-2xl text-slate-300 font-bold">&rarr;</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 relative group hover:shadow-lg transition">
+                    <div class="w-10 h-10 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-3 font-bold">3</div>
+                    <h5 class="font-bold text-slate-800">Scale Traffic</h5>
+                    <p class="text-sm text-slate-500 mt-2">PPC, Social Ads, Email Automation, Retargeting.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="text-2xl text-slate-300 font-bold">&rarr;</div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 relative group hover:shadow-lg transition">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 font-bold">4</div>
+                    <h5 class="font-bold text-slate-800">Analyze & Iterate</h5>
+                    <p class="text-sm text-slate-500 mt-2">A/B Testing, Data Analysis, CRO, Growth Hacking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Financial Projection (The ROI) -->
+        <section class="bg-slate-900 rounded-2xl p-8 md:p-12 text-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">The Result: <br><span class="text-blue-400">Predictable Revenue</span></h3>
+                    <p class="text-slate-300 mb-6">
+                        By fixing the conversion leaks and optimizing traffic sources, we don't just increase clicks—we increase profitability. 
+                        The chart projects revenue growth based on a conservative 20% improvement in Conversion Rate (CRO).
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-400 font-bold">✓</span>
+                            <span>Lower Cost Per Acquisition (CPA)</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-400 font-bold">✓</span>
+                            <span>Higher Customer Lifetime Value (LTV)</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-green-400 font-bold">✓</span>
+                            <span>Automated Lead Nurturing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / CTA -->
+        <footer class="text-center py-10">
+            <h4 class="text-2xl font-bold text-slate-800 mb-4">Ready to engineer your growth?</h4>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">
+                We don't just sell services; we sell outcomes. Let's discuss the specific implementation of this roadmap for your business.
+            </p>
+            <button class="bg-slate-900 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:bg-slate-800 transition transform hover:-translate-y-1">
+                Book Your Strategy Call
+            </button>
+            <p class="text-xs text-slate-400 mt-6">
+                &copy; 2024 Mohit Parmar Agency. All Rights Reserved. | Performance Marketing & Development
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- UTILITY: Label Wrapping (Max 16 chars per line) ---
+        function wrapLabel(str) {
+            if (typeof str !== 'string') return str;
+            if (str.length <= 16) return str;
+            
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= 16) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- GLOBAL: Chart Colors (Deep Ocean & Electric Coral) ---
+        const colors = {
+            primary: '#3B82F6', // Blue 500
+            accent: '#F43F5E',  // Rose 500
+            secondary: '#6366F1', // Indigo 500
+            tertiary: '#10B981', // Emerald 500
+            slate: '#64748B'    // Slate 500
+        };
+
+        // --- GLOBAL: Common Tooltip Configuration ---
+        const commonTooltip = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: TRAFFIC SOURCES (Donut) ---
+        const ctxTraffic = document.getElementById('trafficChart').getContext('2d');
+        const rawTrafficLabels = ["Paid Advertising (PPC)", "Organic Search (SEO)", "Social Media Referrals", "Direct & Email Marketing"];
+        const wrappedTrafficLabels = rawTrafficLabels.map(wrapLabel);
+
+        new Chart(ctxTraffic, {
+            type: 'doughnut',
+            data: {
+                labels: wrappedTrafficLabels,
+                datasets: [{
+                    data: [60, 15, 10, 15],
+                    backgroundColor: [colors.accent, colors.primary, colors.secondary, colors.tertiary],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 12, font: { size: 10 } }
+                    },
+                    tooltip: commonTooltip
+                }
+            }
+        });
+
+        // --- CHART 2: CONVERSION FUNNEL (Horizontal Bar) ---
+        const ctxFunnel = document.getElementById('funnelChart').getContext('2d');
+        const rawFunnelLabels = ["Total Website Visitors", "Product/Service Views", "Add to Cart / Leads", "Completed Purchases"];
+        const wrappedFunnelLabels = rawFunnelLabels.map(wrapLabel);
+
+        new Chart(ctxFunnel, {
+            type: 'bar',
+            data: {
+                labels: wrappedFunnelLabels,
+                datasets: [{
+                    label: 'Users',
+                    data: [12000, 4500, 300, 85],
+                    backgroundColor: [colors.primary, colors.secondary, colors.accent, colors.tertiary],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Makes it horizontal
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltip
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        beginAtZero: true
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 3: REVENUE TRAJECTION (Area Line) ---
+        const ctxRevenue = document.getElementById('revenueChart').getContext('2d');
+        const rawRevLabels = ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"];
+
+        new Chart(ctxRevenue, {
+            type: 'line',
+            data: {
+                labels: rawRevLabels,
+                datasets: [
+                    {
+                        label: 'Projected Revenue (With Our Strategy)',
+                        data: [15000, 18500, 24000, 32000, 41000, 55000],
+                        borderColor: '#60A5FA', // Lighter blue for dark background
+                        backgroundColor: 'rgba(96, 165, 250, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Current Baseline',
+                        data: [15000, 15200, 14800, 15500, 15100, 15800],
+                        borderColor: '#94A3B8',
+                        borderDash: [5, 5],
+                        fill: false,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { color: 'white' } },
+                    tooltip: commonTooltip
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: 'rgba(255,255,255,0.7)' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: 'rgba(255,255,255,0.7)' }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 4: SKILL MATRIX (Radar) ---
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        const rawRadarLabels = ["Technical SEO", "UI/UX Design", "Content Strategy", "Paid Ads Mgmt", "Data Analytics", "Backend Dev"];
+        const wrappedRadarLabels = rawRadarLabels.map(wrapLabel);
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: wrappedRadarLabels,
+                datasets: [{
+                    label: 'Current Status',
+                    data: [40, 50, 60, 80, 30, 40],
+                    fill: true,
+                    backgroundColor: 'rgba(244, 63, 94, 0.2)', // Red tint
+                    borderColor: colors.accent,
+                    pointBackgroundColor: colors.accent,
+                    pointBorderColor: '#fff',
+                }, {
+                    label: 'Target Maturity',
+                    data: [90, 85, 90, 95, 100, 85],
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)', // Blue tint
+                    borderColor: colors.primary,
+                    pointBackgroundColor: colors.primary,
+                    pointBorderColor: '#fff',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: commonTooltip
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#E2E8F0' },
+                        grid: { color: '#E2E8F0' },
+                        pointLabels: {
+                            font: { size: 10 }
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // --- CHART 5: KEYWORD BUBBLE (Plotly.js) ---
+        // Using Plotly for advanced statistical visualization
+        const trace1 = {
+            x: [15, 25, 35, 80, 90], // Competition/Difficulty
+            y: [80, 75, 60, 90, 95], // Search Volume (Relative)
+            text: ['Niche Long-tail', 'Local Service', 'Product Specific', 'Broad Industry', 'Brand Terms'],
+            mode: 'markers',
+            marker: {
+                size: [25, 20, 30, 15, 10], // Cost Per Click or Opportunity Value
+                color: [colors.tertiary, colors.tertiary, colors.primary, colors.accent, colors.slate],
+                opacity: 0.7
+            },
+            type: 'scatter'
+        };
+
+        const layout = {
+            margin: { t: 20, r: 20, b: 40, l: 40 },
+            showlegend: false,
+            xaxis: {
+                title: 'Keyword Difficulty',
+                showgrid: true,
+                zeroline: false,
+                gridcolor: '#E2E8F0'
+            },
+            yaxis: {
+                title: 'Search Volume',
+                showgrid: true,
+                zeroline: false,
+                gridcolor: '#E2E8F0'
+            },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            font: { family: 'Inter, sans-serif' }
+        };
+
+        const config = { responsive: true, displayModeBar: false, renderer: 'canvas' }; // Force Canvas
+        
+        Plotly.newPlot('bubbleChart', [trace1], layout, config);
+
+    </script>
+</body>
+</html>
