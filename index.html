@@ -1,1516 +1,803 @@
 <!doctype html>
-<html lang="en" class="h-full scroll-smooth">
+<html lang="en">
 <head>
-  <title>Scaling Ads, Conversion & Revenue with AI & Automation | Mohit Parmar Agency</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="description" content="A data-driven digital growth audit identifying traffic leaks, conversion gaps, and revenue opportunities. Built for scalable brands." />
+  <title>Mohit Parmar — Creative & Growth Director | CRO, E-commerce & AI</title>
+  <meta name="description" content="Portfolio of Mohit Parmar, a creative and growth leader working across e-commerce, CRO, performance creative, Shopify and AI-assisted workflows." />
+  <link rel="canonical" href="https://www.mohitparmar.co.in/" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#0c0c0d" />
 
-<link rel="canonical" href="https://www.mohitparmar.agency/growth-audit" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohit Parmar — Creative & Growth Director" />
+  <meta property="og:description" content="Creative direction, CRO, e-commerce, Shopify and AI-assisted workflows for brands that need better work and better numbers." />
+  <meta property="og:url" content="https://www.mohitparmar.co.in/" />
+  <meta property="og:site_name" content="Mohit Parmar" />
+  <meta name="twitter:card" content="summary" />
 
-  <title>Growth Partner Program | Mohit Parmar Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<meta name="description"
-  content="Work directly with Mohit Parmar as your Growth Partner to scale revenue using CRO, performance marketing, and full-stack execution." />
-
-<link rel="canonical" href="https://www.mohitparmar.agency/growth-partner" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- (Optional) Your platform SDK scripts -->
-  <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohit Parmar",
+    "url": "https://www.mohitparmar.co.in/",
+    "email": "mailto:mohitparmar110@gmail.com",
+    "jobTitle": "Creative & Growth Director",
+    "knowsAbout": [
+      "Creative Direction",
+      "Conversion Rate Optimization",
+      "E-commerce",
+      "Shopify",
+      "Performance Creative",
+      "Digital Analytics",
+      "Artificial Intelligence Workflows"
+    ]
+  }
+  </script>
 
   <style>
+    :root {
+      --ink: #0c0c0d;
+      --paper: #f3f0e9;
+      --paper-2: #e9e5dc;
+      --muted: #77736b;
+      --line: rgba(12,12,13,.16);
+      --accent: #ff5a36;
+      --lime: #d7ff57;
+      --white: #fff;
+      --max: 1240px;
+      --radius: 24px;
+    }
+
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body { margin: 0; }
-
-    .font-heading { font-family: 'Syne', sans-serif; }
-    .font-body { font-family: 'Space Grotesk', sans-serif; }
-    .font-tech { font-family: 'Orbitron', monospace; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    .animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; }
-    .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
-    .animate-scale { animation: scaleIn 0.6s ease-out forwards; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    img { max-width: 100%; display: block; }
 
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-500 { animation-delay: 0.5s; }
-    .delay-600 { animation-delay: 0.6s; }
-    .delay-700 { animation-delay: 0.7s; }
-    .delay-800 { animation-delay: 0.8s; }
+    ::selection { background: var(--lime); color: var(--ink); }
 
-    .trust-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .trust-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15); }
-
-    .badge-pulse { animation: pulse 2s ease-in-out infinite; }
-
-    .nav-shadow { box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
-
-    .testimonial-card {
-      background: white;
-      border-left: 4px solid #f97316;
-      transition: all 0.3s ease;
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -80px;
+      z-index: 9999;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--lime);
+      color: var(--ink);
+      transition: top .2s ease;
     }
-    .testimonial-card:hover { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transform: translateX(4px); }
+    .skip-link:focus { top: 16px; }
 
-    .stat-number {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .shell { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+    .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+    .caps { text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 700; }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(12,12,13,.86);
+      backdrop-filter: blur(18px);
     }
-
-    .cta-button { position: relative; overflow: hidden; transition: all 0.3s ease; }
-    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3); }
-
-    .trust-badge { border: 2px solid #e5e7eb; transition: all 0.3s ease; }
-    .trust-badge:hover { border-color: #1e3a8a; background: #f0f9ff; }
-
-    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); }
-
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e3a8a, #2563eb); border-radius: 5px; }
-
-    /* Dropdown */
-    .dropdown { position: relative; }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 800px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-      padding: 24px;
-      z-index: 100;
-      margin-top: 8px;
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: #fff;
     }
-    .dropdown:hover .dropdown-content { display: block; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+    }
+    .brand span:last-child { font-size: 14px; }
 
-    .dropdown-content a {
-      display: block;
-      padding: 8px 12px;
-      color: #475569;
-      text-decoration: none;
-      transition: all 0.2s ease;
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
       font-size: 13px;
-      border-radius: 6px;
+      color: rgba(255,255,255,.72);
+      transition: color .2s ease;
     }
-    .dropdown-content a:hover { background: #f0f9ff; color: #1e3a8a; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: #fff; }
+    .nav-cta {
+      padding: 11px 16px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      color: #fff !important;
+    }
 
-    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .category-column { display: flex; flex-direction: column; gap: 4px; }
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: transparent;
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
 
-    .category-header {
-      padding: 8px 12px;
-      font-weight: 600;
-      font-size: 11px;
+    .mobile-menu {
+      display: none;
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 12px 0 20px;
+    }
+    .mobile-menu.is-open { display: grid; }
+    .mobile-menu a { color: #fff; padding: 12px 0; font-size: 15px; }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      padding: 150px 0 72px;
+      color: #fff;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      right: -170px;
+      top: 70px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      box-shadow: 0 0 0 90px rgba(255,255,255,.025), 0 0 0 180px rgba(255,255,255,.018);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.16fr .84fr;
+      align-items: end;
+      gap: 56px;
+      min-height: calc(100svh - 222px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,.62);
+      margin-bottom: 30px;
+    }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); }
+    .hero h1 {
+      margin: 0;
+      max-width: 890px;
+      font-size: clamp(58px, 8.7vw, 142px);
+      line-height: .82;
+      letter-spacing: -.065em;
+      font-weight: 500;
+    }
+    .hero h1 em {
+      color: var(--paper);
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+    }
+    .hero-copy {
+      margin: 34px 0 0;
+      max-width: 680px;
+      font-size: clamp(17px, 1.45vw, 21px);
+      line-height: 1.65;
+      color: rgba(255,255,255,.68);
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 19px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease, color .25s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--lime); color: var(--ink); }
+    .button-secondary { border: 1px solid rgba(255,255,255,.22); color: #fff; }
+
+    .scene-wrap { display: grid; place-items: center; min-height: 520px; perspective: 1200px; }
+    .scene {
+      width: min(420px, 100%);
+      aspect-ratio: .88;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform .16s ease-out;
+    }
+    .scene-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.13);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.35);
+      transform-style: preserve-3d;
+    }
+    .scene-card.back-2 { background: #302b27; transform: translate(-36px,-28px) rotate(-9deg) translateZ(-70px); opacity: .55; }
+    .scene-card.back-1 { background: #f2bd2f; transform: translate(24px,-12px) rotate(7deg) translateZ(-35px); opacity: .75; }
+    .scene-card.front {
+      padding: 28px;
+      background: linear-gradient(145deg, #171719, #0d0d0e);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .scene-card.front::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -90px;
+      top: 90px;
+      border-radius: 50%;
+      border: 1px solid rgba(215,255,87,.55);
+      box-shadow: 0 0 0 28px rgba(215,255,87,.05), 0 0 0 56px rgba(215,255,87,.03);
+    }
+    .scene-top { display: flex; justify-content: space-between; color: rgba(255,255,255,.52); }
+    .scene-title {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: .92;
+      letter-spacing: -.05em;
+      color: #fff;
+    }
+    .scene-list { position: relative; z-index: 2; display: grid; gap: 8px; }
+    .scene-pill {
+      width: max-content;
+      max-width: 100%;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.04);
+      font-size: 12px;
+      color: rgba(255,255,255,.72);
+    }
+
+    .marquee {
+      border-top: 1px solid rgba(255,255,255,.1);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: var(--ink);
+      color: #fff;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 25s linear infinite;
+    }
+    .marquee-track span {
+      padding: 18px 28px;
+      white-space: nowrap;
+      color: rgba(255,255,255,.6);
+      font-size: 12px;
+      letter-spacing: .11em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #f97316;
-      background: #fef3c7;
-      border-radius: 6px;
-      margin-bottom: 4px;
+    }
+    .marquee-track b { color: var(--lime); margin-right: 22px; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    section { scroll-margin-top: 90px; }
+    .section { padding: 110px 0; }
+    .section-dark { background: var(--ink); color: #fff; }
+    .section-head {
+      display: grid;
+      grid-template-columns: .35fr 1fr;
+      gap: 40px;
+      margin-bottom: 58px;
+      align-items: start;
+    }
+    .section-kicker { color: var(--muted); }
+    .section-dark .section-kicker { color: rgba(255,255,255,.46); }
+    .section-title {
+      margin: 0;
+      max-width: 930px;
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: .95;
+      letter-spacing: -.055em;
+      font-weight: 500;
+    }
+    .section-title em { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+
+    .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .work-card {
+      min-height: 520px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      transition: transform .35s cubic-bezier(.2,.75,.2,1), box-shadow .35s ease;
+    }
+    .work-card:hover { transform: translateY(-7px); box-shadow: 0 26px 60px rgba(12,12,13,.10); }
+    .work-art {
+      min-height: 320px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .work-art::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent);
+    }
+    .art-auraz { background: #bca46c; }
+    .art-jyotish { background: #7c2f27; }
+    .art-urban { background: #1d2d27; }
+    .art-designoir { background: #d9d9d5; }
+
+    .browser {
+      position: relative;
+      z-index: 2;
+      width: 86%;
+      min-height: 215px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 18px 45px rgba(0,0,0,.20);
+      overflow: hidden;
+      transform: rotate(-2.2deg);
+    }
+    .work-card:nth-child(even) .browser { transform: rotate(2.2deg); }
+    .browser-bar { height: 31px; display: flex; align-items: center; gap: 6px; padding: 0 11px; border-bottom: 1px solid rgba(0,0,0,.08); }
+    .browser-bar i { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,.22); }
+    .browser-body { padding: 22px; }
+    .browser-label { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(0,0,0,.45); }
+    .browser-name { font-size: clamp(28px, 4vw, 48px); letter-spacing: -.05em; margin-top: 40px; }
+    .browser-lines { display: grid; gap: 7px; margin-top: 15px; width: 72%; }
+    .browser-lines span { display: block; height: 5px; border-radius: 5px; background: rgba(0,0,0,.12); }
+    .browser-lines span:nth-child(2) { width: 70%; }
+
+    .work-copy { padding: 26px 28px 30px; display: grid; gap: 16px; }
+    .work-meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .work-index { color: var(--muted); font-size: 12px; }
+    .work-link { font-size: 12px; font-weight: 700; }
+    .work-copy h3 { margin: 0; font-size: 28px; letter-spacing: -.04em; }
+    .work-copy p { margin: 0; color: #656159; line-height: 1.7; font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+
+    .expertise-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid rgba(255,255,255,.13); border-left: 1px solid rgba(255,255,255,.13); }
+    .expertise-item { min-height: 330px; padding: 30px; border-right: 1px solid rgba(255,255,255,.13); border-bottom: 1px solid rgba(255,255,255,.13); display: flex; flex-direction: column; justify-content: space-between; }
+    .expertise-num { color: rgba(255,255,255,.35); font-size: 12px; }
+    .expertise-item h3 { margin: 70px 0 16px; font-size: 26px; letter-spacing: -.04em; }
+    .expertise-item p { margin: 0; color: rgba(255,255,255,.58); line-height: 1.7; font-size: 13px; }
+
+    .method-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .method-card { border-top: 1px solid var(--ink); padding: 24px 0 12px; }
+    .method-card .num { font-family: "Instrument Serif", Georgia, serif; font-size: 58px; line-height: 1; color: #b4afa5; }
+    .method-card h3 { margin: 26px 0 10px; font-size: 21px; }
+    .method-card p { margin: 0; color: #6e6a62; line-height: 1.75; font-size: 14px; }
+
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
+    .about-sticky { position: sticky; top: 118px; }
+    .about-title { margin: 0; font-size: clamp(48px, 6vw, 86px); line-height: .93; letter-spacing: -.055em; font-weight: 500; }
+    .about-copy { font-size: clamp(18px, 2vw, 26px); line-height: 1.55; letter-spacing: -.025em; margin: 0 0 44px; }
+    .timeline { border-top: 1px solid rgba(255,255,255,.16); }
+    .timeline-row { display: grid; grid-template-columns: 145px 1fr; gap: 26px; padding: 25px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+    .timeline-row span { color: rgba(255,255,255,.42); font-size: 12px; }
+    .timeline-row strong { font-size: 14px; font-weight: 600; }
+    .about-note { margin-top: 30px; color: rgba(255,255,255,.55); font-size: 13px; line-height: 1.7; }
+
+    .faq { display: grid; grid-template-columns: .4fr 1fr; gap: 50px; }
+    .faq-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { list-style: none; cursor: pointer; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font-weight: 700; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-weight: 400; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: -4px 0 24px; max-width: 720px; color: #6b675f; line-height: 1.75; font-size: 14px; }
+
+    .contact {
+      background: var(--lime);
+      color: var(--ink);
+      padding: 95px 0 55px;
+    }
+    .contact-top { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+    .contact h2 { margin: 0; max-width: 960px; font-size: clamp(58px, 9vw, 138px); line-height: .82; letter-spacing: -.065em; font-weight: 500; }
+    .contact h2 em { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+    .contact-mail {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      transition: transform .25s ease;
+    }
+    .contact-mail:hover { transform: rotate(-7deg) scale(1.04); }
+    .footer-line { margin-top: 70px; padding-top: 22px; border-top: 1px solid rgba(12,12,13,.2); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+    @media (max-width: 1040px) {
+      .hero-grid { grid-template-columns: 1fr; align-items: start; }
+      .hero h1 { max-width: 920px; }
+      .scene-wrap { min-height: 410px; }
+      .scene { width: min(340px, 84vw); }
+      .section-head { grid-template-columns: 1fr; gap: 18px; }
+      .expertise-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .about-grid { grid-template-columns: 1fr; gap: 50px; }
+      .about-sticky { position: static; }
+      .faq { grid-template-columns: 1fr; gap: 24px; }
     }
 
-    .dropdown-arrow { display: inline-block; margin-left: 4px; transition: transform 0.3s ease; }
-    .dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    @media (max-width: 760px) {
+      .shell { width: min(calc(100% - 28px), var(--max)); }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; }
+      .menu-button { display: grid; place-items: center; }
+      .hero { padding: 124px 0 58px; }
+      .hero-grid { min-height: auto; gap: 50px; }
+      .hero h1 { font-size: clamp(54px, 17vw, 84px); }
+      .hero-copy { font-size: 16px; }
+      .scene-wrap { min-height: 360px; }
+      .scene { width: 270px; }
+      .section { padding: 82px 0; }
+      .section-title { font-size: clamp(42px, 13vw, 68px); }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-card { min-height: auto; }
+      .work-art { min-height: 265px; }
+      .browser { width: 90%; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .expertise-item { min-height: 265px; }
+      .method-grid { grid-template-columns: 1fr; }
+      .method-card { padding-bottom: 30px; }
+      .timeline-row { grid-template-columns: 100px 1fr; }
+      .contact-top { grid-template-columns: 1fr; align-items: start; }
+      .contact-mail { width: 110px; height: 110px; }
+      .contact h2 { font-size: clamp(58px, 17vw, 96px); }
+    }
 
-    /* Help anchor scroll with fixed nav */
-    section { scroll-margin-top: 96px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
   </style>
-
-  <style>@view-transition { navigation: auto; }</style>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<body class="h-full font-body">
-  <div id="app-wrapper" class="w-full h-full overflow-auto" style="background:#ffffff;">
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="Mohit Parmar home">
+        <span class="brand-mark">MP</span>
+        <span>Mohit Parmar</span>
+      </a>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 nav-shadow"
-         style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-lg flex items-center justify-center"
-               style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);">
-            <span id="nav-initials" class="font-heading font-bold text-lg text-white">MP</span>
-          </div>
-          <div>
-            <div class="font-heading font-bold text-lg" style="color:#1e3a8a;">Mohit Parmar</div>
-            <div class="font-body text-xs" style="color:#64748b;">Creative Strategist</div>
-          </div>
-        </div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a href="/growth-audit">Growth Audit</a>
+        <a href="/growth-partner">Growth Partner</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
 
-        <div class="hidden md:flex gap-8 items-center">
-          <div class="dropdown">
-            <a href="#services" class="font-body text-sm font-medium transition-colors" style="color:#475569;">
-              Services <span class="dropdown-arrow">▼</span>
-            </a>
-            <div class="dropdown-content">
-              <div class="category-grid">
-                <div class="category-column">
-                  <div class="category-header">🎨 Creative Services</div>
-                  <a href="#services">Video Editing &amp; Post Production</a>
-                  <a href="#services">Brand &amp; Creative Direction</a>
-                  <a href="#services">UI/UX Design</a>
-                  <a href="#services">Brand Management</a>
-                </div>
-
-                <div class="category-column">
-                  <div class="category-header">💻 Technical Services</div>
-                  <a href="#services">Web Development</a>
-                  <a href="#services">E-Commerce Solutions</a>
-                  <a href="#services">App Development</a>
-                  <a href="#services">SaaS &amp; Integration</a>
-                </div>
-
-                <div class="category-column">
-                  <div class="category-header">📈 Marketing Services</div>
-                  <a href="#services">SEO &amp; SMM</a>
-                  <a href="#services">Email &amp; WhatsApp Marketing</a>
-                  <a href="#services">Marketplace Onboarding</a>
-                  <a href="#services">Analytics &amp; CRO</a>
-                </div>
-
-                <div class="category-column">
-                  <div class="category-header">🚀 Innovation Services</div>
-                  <a href="#services">Gen AI Automation</a>
-                  <a href="#services">D2C &amp; B2B Business</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="/growth-audit" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Growth Audit</a>
-          <a href="/growth-partner" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Growth Partners</a>
-          <a href="#pricing" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Investment</a>
-          <a href="#results" class="font-body text-sm font-medium transition-colors" style="color:#475569;">Results</a>
-          <a href="#contact"
-             class="px-6 py-2.5 rounded-lg font-body text-sm font-semibold text-white transition-all hover:scale-105"
-             style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-            Book Consultation
-          </a>
-        </div>
-      </div>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span>☰</span>
+      </button>
+    </div>
+    <nav class="shell mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#about">About</a>
+      <a href="/growth-audit">Growth Audit</a>
+      <a href="/growth-partner">Growth Partner</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-          <!-- Left Content -->
-          <div>
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 opacity-0 animate-fade-up"
-                 style="background:#fef3c7; border:1px solid #fbbf24;">
-              <span class="w-2 h-2 rounded-full badge-pulse" style="background:#f97316;"></span>
-              <span class="font-body text-sm font-semibold" style="color:#92400e;">Available for New Projects</span>
-            </div>
-
-            <h1 id="hero-name"
-                class="font-heading text-6xl md:text-7xl font-bold mb-4 opacity-0 animate-fade-up delay-100"
-                style="color:#0f172a; line-height:1.1;">
-              Mohit Dheeraj Parmar
-            </h1>
-
-            <p id="hero-title"
-               class="font-heading text-2xl md:text-3xl font-semibold mb-6 opacity-0 animate-fade-up delay-200"
-               style="color:#1e3a8a;">
-              Creative Brand Strategist &amp; Gen-AI Enabler
-            </p>
-
-            <p id="hero-tagline"
-               class="font-body text-lg mb-8 leading-relaxed opacity-0 animate-fade-up delay-300"
-               style="color:#475569;">
-              Transforming brands with data-driven creative strategies and AI-powered workflows. Proven track record delivering 3.5x ROAS for 50+ D2C and B2B companies.
-            </p>
-
-            <!-- Trust Indicators -->
-            <div class="flex flex-wrap gap-6 mb-10 opacity-0 animate-fade-up delay-400">
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <span class="font-body text-sm font-medium" style="color:#334155;">10+ Years Experience</span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <span class="font-body text-sm font-medium" style="color:#334155;">500+ Projects Delivered</span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <span class="font-body text-sm font-medium" style="color:#334155;">100% Client Satisfaction</span>
-              </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-4 opacity-0 animate-fade-up delay-500">
-              <a id="cta-primary" href="#contact"
-                 class="cta-button px-8 py-4 rounded-lg font-body text-base font-bold text-white shadow-lg"
-                 style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-                Get Free Consultation
-              </a>
-
-              <a id="cta-secondary" href="#results"
-                 class="px-8 py-4 rounded-lg font-body text-base font-bold transition-all hover:scale-105"
-                 style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
-                View Case Studies
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Visual -->
-          <div class="relative opacity-0 animate-scale delay-600">
-            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl"
-                 style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-              <div class="w-full h-full flex items-center justify-center p-12">
-                <div class="text-center">
-                  <div class="text-9xl mb-6">👨‍💼</div>
-                  <div class="font-heading text-2xl font-bold mb-2" style="color:#1e3a8a;">Trusted by Top Brands</div>
-                  <div class="font-body text-base" style="color:#64748b;">Delivering Excellence Since 2014</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Floating Trust Badges -->
-            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl trust-badge">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:#dcfce7;">
-                  <svg class="w-6 h-6" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="font-heading text-sm font-bold" style="color:#0f172a;">Verified Pro</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Top 1% Creator</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl trust-badge">
-              <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:#fef3c7;">
-                  <span class="text-2xl">⭐</span>
-                </div>
-                <div>
-                  <div class="font-heading text-sm font-bold" style="color:#0f172a;">5.0 Rating</div>
-                  <div class="font-body text-xs" style="color:#64748b;">50+ Reviews</div>
-                </div>
-              </div>
-            </div>
-
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow caps"><span class="eyebrow-dot"></span> Creative + Growth / Mumbai</div>
+          <h1>I build the <em>creative, commerce</em> and conversion systems behind growing brands.</h1>
+          <p class="hero-copy">I’m Mohit Parmar — a creative and growth operator working across e-commerce, CRO, performance creative, Shopify and AI-assisted workflows. I care about how the work looks, how the journey feels and what happens after someone clicks.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="mailto:mohitparmar110@gmail.com">Start a conversation</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 px-6" style="background:#1e3a8a;">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div class="opacity-0 animate-fade-up delay-100">
-            <div id="years-stat" class="font-heading text-5xl font-bold mb-2 text-white">10+</div>
-            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Years Experience</div>
-          </div>
-          <div class="opacity-0 animate-fade-up delay-200">
-            <div id="projects-stat" class="font-heading text-5xl font-bold mb-2 text-white">500+</div>
-            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Projects Completed</div>
-          </div>
-          <div class="opacity-0 animate-fade-up delay-300">
-            <div id="brands-stat" class="font-heading text-5xl font-bold mb-2 text-white">50+</div>
-            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Brands Served</div>
-          </div>
-          <div class="opacity-0 animate-fade-up delay-400">
-            <div class="font-heading text-5xl font-bold mb-2 text-white">3.5x</div>
-            <div class="font-body text-sm uppercase tracking-wide" style="color:#93c5fd;">Average ROAS</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Carousel Section -->
-    <section id="services" class="py-24 px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">What I Offer</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Comprehensive Creative Solutions</h2>
-          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">End-to-end creative services designed to elevate your brand and drive measurable results</p>
-        </div>
-
-        <div class="relative">
-          <div class="overflow-hidden" id="carousel-container">
-            <div class="flex transition-transform duration-500 ease-out" id="carousel-track">
-
-              <!-- Service 1 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">🎬</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Video Editing &amp; Post Production</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Professional video editing, color grading, motion graphics using DaVinci Resolve, After Effects, and Cinema 4D.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">DaVinci Resolve</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">After Effects</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Premiere Pro</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Cinema 4D</span>
-                    </div>
-                  </div>
-                </div>
+        <div class="scene-wrap" aria-hidden="true">
+          <div class="scene" id="heroScene">
+            <div class="scene-card back-2"></div>
+            <div class="scene-card back-1"></div>
+            <div class="scene-card front">
+              <div class="scene-top caps"><span>Portfolio / 2026</span><span>MP</span></div>
+              <div class="scene-title serif">Ideas are useful.<br />Systems are better.</div>
+              <div class="scene-list">
+                <span class="scene-pill">Creative Direction</span>
+                <span class="scene-pill">CRO + Analytics</span>
+                <span class="scene-pill">Shopify + E-commerce</span>
+                <span class="scene-pill">AI Workflows</span>
               </div>
-
-              <!-- Service 2 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">🎨</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Brand &amp; Creative Direction</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Strategic brand identity development and creative campaigns using Adobe Creative Suite and Figma.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Adobe Creative Suite</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Figma</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Canva</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Adobe Firefly</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 3 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">🛒</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">E-Commerce Solutions</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Full-stack e-commerce development for Shopify, Amazon, and WordPress platforms with custom integrations.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Platforms</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Shopify</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 4 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">🤖</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Gen AI Automation</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">AI-powered creative workflows and automation using ChatGPT, Gemini, ElevenLabs, and n8n.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">ChatGPT</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Gemini Pro</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">n8n</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">ElevenLabs</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 5 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">📊</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Analytics &amp; CRO</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Data-driven optimization and tracking with GA4, Hotjar, Power BI, and advanced Excel reporting.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Tools</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">GA4</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hotjar</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Power BI</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Excel</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 6 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">💻</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Web Development</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Custom web development with HTML, CSS, Liquid, and modern hosting solutions via Hostinger and Cloudflare.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Skills</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">HTML/CSS</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Liquid</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Hostinger</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Cloudflare</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 7 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">🎯</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">UI/UX Design</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">User-centered design experiences with wireframing, prototyping, and conversion-optimized interfaces.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Key Deliverables</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">User Research</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Wireframing</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Prototyping</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">CRO Design</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 8 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">🏆</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Brand Management</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Complete brand identity systems, positioning strategies, and brand guidelines for consistent market presence.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Services Included</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Brand Strategy</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Logo Design</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Brand Guidelines</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Positioning</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 9 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">🚀</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Marketplace Onboarding</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Complete setup and optimization for Amazon, Flipkart, and other major marketplaces with SEO-optimized listings.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Marketplaces</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">eBay</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Etsy</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 10 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">📣</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">SEO &amp; Social Media Marketing</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Search engine optimization and multi-platform social media campaigns for maximum organic reach and engagement.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Channels</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Google SEO</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Instagram</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Facebook</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">LinkedIn</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 11 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">✉️</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">Email &amp; WhatsApp Marketing</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Automated email campaigns, EDM design, WhatsApp Business API integration, and broadcast campaigns.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Services</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">EDM Design</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Automation</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">WhatsApp API</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Broadcasts</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 12 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">🔗</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">SaaS &amp; Integration Management</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Third-party integrations, API connections, CRM setup, and marketing automation tool stack management.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Platforms</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Zapier</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">HubSpot</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Klaviyo</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Mailchimp</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 13 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                    <span class="text-3xl">📲</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">App Development</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">Mobile app design and development consultation for iOS and Android with focus on e-commerce and customer engagement.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Specialization</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">iOS</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">Android</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">E-commerce Apps</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#f0f9ff; color:#1e3a8a;">UI Design</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 14 -->
-              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                <div class="trust-card p-8 rounded-2xl h-full" style="background:white; border:2px solid #e2e8f0;">
-                  <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                    <span class="text-3xl">💼</span>
-                  </div>
-                  <h3 class="font-heading text-2xl font-bold mb-4" style="color:#0f172a;">D2C &amp; B2B Business Development</h3>
-                  <p class="font-body text-base leading-relaxed mb-6" style="color:#64748b;">End-to-end business development strategies for direct-to-consumer brands and B2B service companies.</p>
-                  <div class="space-y-2">
-                    <div class="font-body text-xs font-semibold uppercase tracking-wide mb-3" style="color:#f97316;">Focus Areas</div>
-                    <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">D2C Strategy</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">B2B Growth</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Go-to-Market</span>
-                      <span class="px-3 py-1 rounded-full text-xs font-medium" style="background:#fef3c7; color:#92400e;">Sales Funnels</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <button id="carousel-prev"
-                  class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
-                  style="background:white; border:2px solid #e2e8f0;">
-            <svg class="w-6 h-6" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button id="carousel-next"
-                  class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg"
-                  style="background:white; border:2px solid #e2e8f0;">
-            <svg class="w-6 h-6" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          <!-- Indicators -->
-          <div class="flex justify-center gap-2 mt-8" id="carousel-indicators"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider max-w-7xl mx-auto"></div>
-
-    <!-- Tools & Technologies -->
-    <section class="py-24 px-6" style="background:#f8fafc;">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Technical Expertise</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Tools &amp; Technologies</h2>
-          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">Mastery across industry-leading creative, technical, and automation platforms</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Creative -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                <span class="text-2xl">🎨</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Creative</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Adobe Creative Suite</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Figma</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Canva</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Adobe Firefly</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Lovart</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Gemini Pro</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">AI Upscalers</span>
-            </div>
-          </div>
-
-          <!-- Post-Production -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                <span class="text-2xl">🎬</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Post-Production</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Cinema 4D</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Octane Render</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">DaVinci Resolve</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">After Effects</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Premiere Pro</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Adobe Character Animator</span>
-            </div>
-          </div>
-
-          <!-- Pre-Production -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                <span class="text-2xl">📝</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Pre-Production</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Google Flow</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Final Draft</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Blackmagic Camera</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hedge / ShotPut Pro</span>
-            </div>
-          </div>
-
-          <!-- Gen AI -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                <span class="text-2xl">🤖</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Gen AI Automation</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">ChatGPT</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Gemini</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">ElevenLabs</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Firefly</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">n8n</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Flow</span>
-            </div>
-          </div>
-
-          <!-- Web -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                <span class="text-2xl">💻</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Web Development</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">HTML</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">CSS</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Liquid (Shopify)</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Hostinger</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Cloudflare</span>
-            </div>
-          </div>
-
-          <!-- Analytics -->
-          <div class="p-8 rounded-2xl" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-                <span class="text-2xl">📊</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">Analytics &amp; Data</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">GA4</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Hotjar</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Advanced Excel</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#fef3c7; color:#92400e;">Power BI</span>
-            </div>
-          </div>
-
-          <!-- Ecom -->
-          <div class="p-8 rounded-2xl md:col-span-2 lg:col-span-3" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-                <span class="text-2xl">🛒</span>
-              </div>
-              <h3 class="font-heading text-xl font-bold" style="color:#0f172a;">E-Commerce Marketplaces</h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Shopify</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Amazon</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">WordPress WooCommerce</span>
-              <span class="px-3 py-1.5 rounded-lg text-sm font-medium" style="background:#f0f9ff; color:#1e3a8a;">Flipkart</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="section-divider max-w-7xl mx-auto"></div>
-
-    <!-- Investment Packages -->
-    <section id="pricing" class="py-24 px-6" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Investment Options</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Strategic Investment Packages</h2>
-          <p class="font-body text-lg max-w-3xl mx-auto mb-4" style="color:#64748b;">Transparent pricing for premium creative services. No hidden fees, no surprises.</p>
-          <p class="font-body text-base max-w-2xl mx-auto font-semibold" style="color:#1e3a8a;">All packages include unlimited revisions until you're 100% satisfied</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <!-- Starter -->
-          <div class="trust-card p-8 rounded-2xl relative overflow-hidden" style="background:white; border:2px solid #e2e8f0;">
-            <div class="mb-6">
-              <div class="text-4xl mb-4">🚀</div>
-              <h3 class="font-heading text-2xl font-bold mb-2" style="color:#0f172a;">Starter Package</h3>
-              <p class="font-body text-sm mb-4" style="color:#64748b;">Perfect for testing the waters</p>
-              <div class="flex items-baseline gap-2 mb-2">
-                <span class="font-heading text-sm line-through" style="color:#94a3b8;">£3,500</span>
-                <span id="starter-price" class="font-heading text-5xl font-bold" style="color:#1e3a8a;">£2,500</span>
-              </div>
-              <p class="font-body text-xs font-semibold" style="color:#22c55e;">✓ Limited Time: Save £1,000</p>
-            </div>
-
-            <div class="space-y-4 mb-8">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">5x High-Impact Video Ads</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Professional editing &amp; motion graphics</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Basic Brand Identity</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Logo refinement &amp; style guide</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Social Media Graphics</div>
-                  <div class="font-body text-xs" style="color:#64748b;">10 custom templates</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">SEO Setup &amp; Email Template</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Basic optimization + 1 EDM design</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Unlimited Revisions</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Until 100% satisfied</div>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105"
-               style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
-              Get Started
-            </a>
-            <p id="starter-timeline" class="text-center font-body text-xs mt-4" style="color:#64748b;">Delivery: 2 weeks</p>
-          </div>
-
-          <!-- Growth (Popular) -->
-          <div class="trust-card p-8 rounded-2xl relative overflow-hidden"
-               style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); border:3px solid #fbbf24; transform: scale(1.05);">
-            <div class="absolute top-0 right-0 px-4 py-2 rounded-bl-2xl font-body text-xs font-bold text-white" style="background:#f97316;">
-              MOST POPULAR
-            </div>
-
-            <div class="mb-6 mt-6">
-              <div class="text-4xl mb-4">⚡</div>
-              <h3 class="font-heading text-2xl font-bold mb-2 text-white">Growth Package</h3>
-              <p class="font-body text-sm mb-4 text-white" style="opacity:0.9;">For serious brand growth</p>
-              <div class="flex items-baseline gap-2 mb-2">
-                <span class="font-heading text-sm line-through text-white" style="opacity:0.7;">£9,500</span>
-                <span id="growth-price" class="font-heading text-5xl font-bold text-white">£7,500</span>
-              </div>
-              <p class="font-body text-xs font-semibold" style="color:#fbbf24;">✓ Limited Time: Save £2,000</p>
-            </div>
-
-            <div class="space-y-4 mb-8">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">15x Video Ads + 3 Hero Videos</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Full campaign creative suite</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">Complete Brand Management</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Strategy, identity &amp; guidelines</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">E-Commerce + Marketplace Setup</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Shopify store + Amazon onboarding</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">SEO, SMM &amp; Email Marketing</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Multi-channel digital presence</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">UI/UX Design &amp; Analytics</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Conversion optimization + tracking</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#fbbf24;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold text-white">AI Automation + Priority Support</div>
-                  <div class="font-body text-xs text-white" style="opacity:0.8;">Workflow setup + direct access</div>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105 shadow-xl"
-               style="background:#f97316; color:white;">
-              Start Your Growth
-            </a>
-            <p id="growth-timeline" class="text-center font-body text-xs mt-4 text-white" style="opacity:0.9;">Delivery: 4 weeks</p>
-          </div>
-
-          <!-- Enterprise -->
-          <div class="trust-card p-8 rounded-2xl relative overflow-hidden" style="background:white; border:2px solid #e2e8f0;">
-            <div class="mb-6">
-              <div class="text-4xl mb-4">👑</div>
-              <h3 class="font-heading text-2xl font-bold mb-2" style="color:#0f172a;">Enterprise Package</h3>
-              <p class="font-body text-sm mb-4" style="color:#64748b;">Complete brand transformation</p>
-              <div class="flex items-baseline gap-2 mb-2">
-                <span id="enterprise-price" class="font-heading text-5xl font-bold" style="color:#1e3a8a;">£15,000+</span>
-              </div>
-              <p class="font-body text-xs font-semibold" style="color:#1e3a8a;">Custom pricing for your needs</p>
-            </div>
-
-            <div class="space-y-4 mb-8">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Unlimited Creative Production</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Monthly video &amp; design content</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Full Brand &amp; Marketing Ecosystem</div>
-                  <div class="font-body text-xs" style="color:#64748b;">All services integrated</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Multi-Platform E-Commerce</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Shopify, Amazon, Flipkart setup</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">D2C &amp; B2B Growth Strategy</div>
-                  <div class="font-body text-xs" style="color:#64748b;">Business development consulting</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">App Development Consultation</div>
-                  <div class="font-body text-xs" style="color:#64748b;">iOS/Android strategy &amp; design</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Complete SaaS Integration</div>
-                  <div class="font-body text-xs" style="color:#64748b;">HubSpot, Klaviyo, automation tools</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                <div>
-                  <div class="font-body text-sm font-semibold" style="color:#0f172a;">Dedicated Account Manager</div>
-                  <div class="font-body text-xs" style="color:#64748b;">White-glove service &amp; support</div>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="block w-full px-6 py-4 rounded-lg font-body text-base font-bold text-center transition-all hover:scale-105"
-               style="background:white; color:#1e3a8a; border:2px solid #1e3a8a;">
-              Discuss Your Needs
-            </a>
-            <p id="enterprise-timeline" class="text-center font-body text-xs mt-4" style="color:#64748b;">Delivery: 8+ weeks</p>
-          </div>
-        </div>
-
-        <!-- ROI Guarantee -->
-        <div class="max-w-4xl mx-auto p-8 rounded-2xl" style="background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); border: 2px solid #f59e0b;">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style="background:white;">
-              <span class="text-3xl">🛡️</span>
-            </div>
-            <div>
-              <h3 id="guarantee-headline" class="font-heading text-2xl font-bold mb-3" style="color:#92400e;">Performance Guarantee</h3>
-              <p id="guarantee-description" class="font-body text-base leading-relaxed mb-4" style="color:#78350f;">
-                If your campaigns don't achieve at least 2.5x ROAS within 90 days of launch, I'll work with you for free until they do. Your success is my success.
-              </p>
-              <div class="flex flex-wrap gap-6 text-sm font-body font-semibold" style="color:#92400e;">
-                <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                  <span>90-Day Guarantee</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                  <span>2.5x ROAS Minimum</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5" style="color:#f59e0b;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                  <span>Risk-Free Investment</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <p class="font-body text-sm mb-4" style="color:#64748b;">💳 Flexible payment plans available • Bank transfer &amp; card accepted</p>
-          <p class="font-body text-xs" style="color:#94a3b8;">All prices in GBP. VAT may apply for UK clients.</p>
-        </div>
-
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span><b>●</b> Creative Direction</span><span><b>●</b> CRO</span><span><b>●</b> Shopify</span><span><b>●</b> Performance Creative</span><span><b>●</b> GA4 + Clarity</span><span><b>●</b> AI Workflows</span><span><b>●</b> Creative Direction</span><span><b>●</b> CRO</span><span><b>●</b> Shopify</span><span><b>●</b> Performance Creative</span><span><b>●</b> GA4 + Clarity</span><span><b>●</b> AI Workflows</span>
       </div>
-    </section>
+    </div>
 
-    <div class="section-divider max-w-7xl mx-auto"></div>
-
-    <!-- Results -->
-    <section id="results" class="py-24 px-6" style="background:#f8fafc;">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Proven Results</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Real Impact for Real Businesses</h2>
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="section-kicker caps">Selected work</div>
+          <h2 class="section-title">A few things I’ve been <em>building, fixing and growing.</em></h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="text-6xl mb-4">📈</div>
-            <div class="font-heading text-4xl font-bold mb-2 stat-number">3.5x</div>
-            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">ROAS Increase</div>
-            <p class="font-body text-sm" style="color:#64748b;">Meta &amp; TikTok campaigns for D2C brands</p>
-          </div>
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <div class="work-art art-auraz">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body">
+                  <div class="browser-label">Jewellery / E-commerce</div>
+                  <div class="browser-name serif">AuraZ</div>
+                  <div class="browser-lines"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-copy">
+              <div class="work-meta"><span class="work-index">01 / D2C</span><a class="work-link" href="https://www.auraz.co.in" target="_blank" rel="noopener">Visit site ↗</a></div>
+              <h3>AuraZ</h3>
+              <p>Brand direction, Shopify build, product merchandising, visual systems and conversion work for a jewellery business built to launch lean and improve from real customer behaviour.</p>
+              <div class="tags"><span class="tag">Shopify</span><span class="tag">Brand</span><span class="tag">CRO</span><span class="tag">Creative</span></div>
+            </div>
+          </article>
 
-          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="text-6xl mb-4">💌</div>
-            <div class="font-heading text-4xl font-bold mb-2 stat-number">85%</div>
-            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Higher Engagement</div>
-            <p class="font-body text-sm" style="color:#64748b;">Email campaigns with custom designs &amp; layouts</p>
-          </div>
+          <article class="work-card reveal">
+            <div class="work-art art-jyotish">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body">
+                  <div class="browser-label">Consultation / Lead generation</div>
+                  <div class="browser-name serif">Apka Jyotish</div>
+                  <div class="browser-lines"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-copy">
+              <div class="work-meta"><span class="work-index">02 / Services</span><a class="work-link" href="https://apkajyotish.com" target="_blank" rel="noopener">Visit site ↗</a></div>
+              <h3>Apka Jyotish</h3>
+              <p>Offer structure, consultation funnel, website direction, content architecture and search-focused pages for a one-expert astrology business competing in a crowded category.</p>
+              <div class="tags"><span class="tag">CRO</span><span class="tag">SEO / AEO</span><span class="tag">Content</span><span class="tag">Web</span></div>
+            </div>
+          </article>
 
-          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="text-6xl mb-4">⚡</div>
-            <div class="font-heading text-4xl font-bold mb-2 stat-number">10x</div>
-            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Faster Production</div>
-            <p class="font-body text-sm" style="color:#64748b;">AI automation pipeline for ad creative</p>
-          </div>
+          <article class="work-card reveal">
+            <div class="work-art art-urban">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body">
+                  <div class="browser-label">Furniture / UK + UAE</div>
+                  <div class="browser-name serif">Urban Deco</div>
+                  <div class="browser-lines"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-copy">
+              <div class="work-meta"><span class="work-index">03 / E-commerce</span><a class="work-link" href="https://www.urbandeco.co.uk" target="_blank" rel="noopener">Visit site ↗</a></div>
+              <h3>Urban Deco</h3>
+              <p>Hands-on work across Shopify merchandising, PDP and PLP improvements, creative production, collection structure, regional storefront needs and conversion-focused UX.</p>
+              <div class="tags"><span class="tag">Shopify</span><span class="tag">UX</span><span class="tag">Merchandising</span><span class="tag">Creative</span></div>
+            </div>
+          </article>
 
-          <div class="trust-card p-8 rounded-2xl text-center" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-            <div class="text-6xl mb-4">🎯</div>
-            <div class="font-heading text-4xl font-bold mb-2 stat-number">100%</div>
-            <div class="font-heading text-lg font-semibold mb-2" style="color:#0f172a;">Client Satisfaction</div>
-            <p class="font-body text-sm" style="color:#64748b;">Unlimited revisions on all projects</p>
-          </div>
+          <article class="work-card reveal">
+            <div class="work-art art-designoir">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i></div>
+                <div class="browser-body">
+                  <div class="browser-label">Product / AI tool</div>
+                  <div class="browser-name serif">Designoirspace</div>
+                  <div class="browser-lines"><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-copy">
+              <div class="work-meta"><span class="work-index">04 / Product</span><a class="work-link" href="https://designoirspace.com" target="_blank" rel="noopener">Visit site ↗</a></div>
+              <h3>Designoirspace</h3>
+              <p>Product thinking for an AI-assisted creative audit tool: clearer scoring, practical feedback, interface direction and a workflow built around ad and design review rather than generic AI output.</p>
+              <div class="tags"><span class="tag">Product</span><span class="tag">AI</span><span class="tag">UI / UX</span><span class="tag">Strategy</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-24 px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Client Testimonials</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Trusted by Industry Leaders</h2>
+    <section class="section section-dark" id="expertise">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="section-kicker caps">What I do</div>
+          <h2 class="section-title">One person who can connect <em>creative decisions</em> to commercial ones.</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
-            <div class="flex items-start gap-1 mb-4">
-              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
-            </div>
-            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
-              "Mohit transformed our ad performance completely. His data-driven approach and creative expertise delivered a 3.5x ROAS increase within 3 months. Outstanding work!"
-            </p>
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#dbeafe;">👨‍💼</div>
-              <div>
-                <div class="font-heading text-base font-bold" style="color:#0f172a;">James Wilson</div>
-                <div class="font-body text-sm" style="color:#64748b;">Marketing Director, UK Fashion Co.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
-            <div class="flex items-start gap-1 mb-4">
-              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
-            </div>
-            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
-              "The Shopify store Mohit built for us is not only beautiful but converts incredibly well. Sales increased by 250% in the first quarter. Highly recommended!"
-            </p>
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#fed7aa;">👩‍💼</div>
-              <div>
-                <div class="font-heading text-base font-bold" style="color:#0f172a;">Sarah Ahmed</div>
-                <div class="font-body text-sm" style="color:#64748b;">CEO, UAE Beauty Brand</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
-            <div class="flex items-start gap-1 mb-4">
-              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
-            </div>
-            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
-              "His AI automation setup revolutionized our creative workflow. We now produce 10x more content without compromising quality. Game changer for our agency!"
-            </p>
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#dbeafe;">👨‍💻</div>
-              <div>
-                <div class="font-heading text-base font-bold" style="color:#0f172a;">Michael Chen</div>
-                <div class="font-body text-sm" style="color:#64748b;">Founder, Digital Marketing Agency</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card p-8 rounded-2xl shadow-lg">
-            <div class="flex items-start gap-1 mb-4">
-              <span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span><span class="text-2xl">⭐</span>
-            </div>
-            <p class="font-body text-base leading-relaxed mb-6" style="color:#475569;">
-              "Professional, responsive, and results-driven. Mohit understands both creative excellence and business objectives. A rare combination in the industry."
-            </p>
-            <div class="flex items-center gap-4">
-              <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background:#fed7aa;">👩‍💼</div>
-              <div>
-                <div class="font-heading text-base font-bold" style="color:#0f172a;">Emma Rodriguez</div>
-                <div class="font-body text-sm" style="color:#64748b;">VP Marketing, B2B SaaS</div>
-              </div>
-            </div>
-          </div>
-
+        <div class="expertise-grid">
+          <article class="expertise-item reveal">
+            <div class="expertise-num">01</div>
+            <div><h3>Creative Direction</h3><p>Campaign systems, art direction, motion, video, product visuals and brand consistency across paid, organic and storefront touchpoints.</p></div>
+          </article>
+          <article class="expertise-item reveal">
+            <div class="expertise-num">02</div>
+            <div><h3>Growth & CRO</h3><p>Funnel audits, landing pages, GA4, Clarity/Hotjar, testing ideas, merchandising and practical conversion fixes based on customer behaviour.</p></div>
+          </article>
+          <article class="expertise-item reveal">
+            <div class="expertise-num">03</div>
+            <div><h3>E-commerce</h3><p>Shopify themes, Liquid, PDP/PLP UX, Search & Discovery, Markets, metafields, merchandising, feeds and day-to-day storefront problem solving.</p></div>
+          </article>
+          <article class="expertise-item reveal">
+            <div class="expertise-num">04</div>
+            <div><h3>AI & Automation</h3><p>Using ChatGPT, Claude, Gemini and generative media tools to speed up research, production, analysis and internal workflows without making the output feel automated.</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Profile Summary -->
-    <section class="py-24 px-6" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="font-heading text-5xl font-bold mb-6 text-white">Profile Summary</h2>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="section-kicker caps">How I work</div>
+          <h2 class="section-title">Start with the problem. <em>Then choose the tool.</em></h2>
         </div>
-
-        <div class="p-8 rounded-2xl mb-12" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-          <p id="profile-summary" class="font-body text-lg leading-relaxed text-white" style="opacity:0.95;">
-            Creative Brand Strategist and Gen-AI Enabler with 10+ years of experience across e-commerce, cinematic content production, and AI-assisted creative workflows. Proven expertise in delivering data-driven campaigns with 3.5x ROAS for 50+ D2C and B2B brands. Specializing in video production, brand direction, e-commerce development, and performance marketing automation. Combining artistic excellence with technical proficiency in Adobe Creative Suite, Shopify, AI automation tools, and analytics platforms to drive measurable business results.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
-                <span class="text-2xl">🎓</span>
-              </div>
-              <h3 class="font-heading text-2xl font-bold text-white">Education</h3>
-            </div>
-            <div id="education-text" class="font-body text-base leading-relaxed text-white" style="opacity:0.9;">
-              Bachelor's Degree in Media Production &amp; Digital Marketing<br/>
-              Specialized certifications in Adobe Creative Suite, Shopify Development, and Gen-AI Automation
-            </div>
-          </div>
-
-          <div class="p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
-                <span class="text-2xl">⭐</span>
-              </div>
-              <h3 class="font-heading text-2xl font-bold text-white">Core Skills</h3>
-            </div>
-            <div class="space-y-2 text-white font-body text-base" style="opacity:0.9;">
-              <div>• Video Production &amp; Post-Production</div>
-              <div>• Brand Strategy &amp; Creative Direction</div>
-              <div>• E-Commerce Development (Shopify)</div>
-              <div>• Performance Marketing &amp; Ad Creative</div>
-              <div>• Gen-AI Workflow Automation</div>
-              <div>• Analytics &amp; Data-Driven Optimization</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 p-8 rounded-2xl" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(255,255,255,0.2);">
-              <span class="text-2xl">🏆</span>
-            </div>
-            <h3 class="font-heading text-2xl font-bold text-white">Key Achievements</h3>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6 text-white font-body text-base" style="opacity:0.9;">
-            <div>✓ Delivered 3.5x average ROAS for 50+ D2C and B2B clients</div>
-            <div>✓ Completed 500+ creative projects across multiple industries</div>
-            <div>✓ Increased email engagement by 85% through custom EDM designs</div>
-            <div>✓ Achieved 10x faster creative production via AI automation</div>
-            <div>✓ Built and launched 30+ high-converting Shopify stores</div>
-            <div>✓ Collaborated with award-winning directors on commercial projects</div>
-          </div>
+        <div class="method-grid">
+          <article class="method-card reveal"><div class="num">01</div><h3>Find the leak</h3><p>I look at the offer, journey, creative, traffic quality and store behaviour before proposing a redesign or another campaign.</p></article>
+          <article class="method-card reveal"><div class="num">02</div><h3>Build the smallest useful fix</h3><p>Change what matters first: message, page hierarchy, product presentation, creative system, tracking or workflow.</p></article>
+          <article class="method-card reveal"><div class="num">03</div><h3>Measure what changed</h3><p>Use behaviour and performance data to decide what stays, what gets cut and what deserves a larger investment.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="font-body text-sm font-bold uppercase tracking-wider mb-3 inline-block" style="color:#f97316;">Get Started Today</span>
-          <h2 class="font-heading text-5xl font-bold mb-6" style="color:#0f172a;">Ready to Transform Your Brand?</h2>
-          <p class="font-body text-lg max-w-3xl mx-auto" style="color:#64748b;">Book a free 30-minute consultation to discuss your project goals and explore how we can work together</p>
+    <section class="section section-dark" id="about">
+      <div class="shell about-grid">
+        <div class="about-sticky reveal">
+          <div class="section-kicker caps" style="margin-bottom:22px;">About</div>
+          <h2 class="about-title">Not just a <span class="serif">designer.</span><br />Not just a marketer.</h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-          <!-- Email -->
-          <a href="mailto:mohitparmar110@gmail.com" class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
-            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-              <svg class="w-7 h-7" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Email</div>
-            <div id="contact-email" class="font-body text-sm" style="color:#64748b;">mohitparmar110@gmail.com</div>
-          </a>
-
-          <!-- Phone -->
-          <div class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
-            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);">
-              <svg class="w-7 h-7" style="color:#ea580c;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Phone</div>
-            <div id="contact-phone" class="font-body text-sm" style="color:#64748b;">+91 9372857140</div>
+        <div class="reveal">
+          <p class="about-copy">I’ve spent more than a decade moving through filmmaking, post-production, motion design, creative leadership, e-commerce and digital growth. That mix is useful when a business does not have a neat “design problem” or “marketing problem” — it simply needs someone to see the full picture and improve it.</p>
+          <div class="timeline">
+            <div class="timeline-row"><span>Foundation</span><strong>Filmmaking, video editing, post-production and motion design</strong></div>
+            <div class="timeline-row"><span>Creative</span><strong>Brand, campaign and creative leadership across digital work</strong></div>
+            <div class="timeline-row"><span>Commerce</span><strong>Shopify, e-commerce operations, merchandising and storefront UX</strong></div>
+            <div class="timeline-row"><span>Growth</span><strong>CRO, analytics, performance creative and customer journey work</strong></div>
+            <div class="timeline-row"><span>Now</span><strong>Creative + growth leadership with AI-assisted execution</strong></div>
           </div>
-
-          <!-- Location -->
-          <div class="trust-card p-6 rounded-2xl text-center" style="background:white; border:2px solid #e2e8f0;">
-            <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);">
-              <svg class="w-7 h-7" style="color:#1e3a8a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div class="font-heading text-sm font-bold mb-1" style="color:#0f172a;">Location</div>
-            <div id="contact-location" class="font-body text-sm" style="color:#64748b;">UK &amp; UAE</div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <a href="mailto:mohitparmar110@gmail.com"
-             class="cta-button inline-block px-12 py-5 rounded-lg font-body text-lg font-bold text-white shadow-2xl"
-             style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-            Schedule Free Consultation
-          </a>
-          <p class="font-body text-sm mt-4" style="color:#64748b;">⚡ Limited availability - Book your slot today</p>
+          <p class="about-note">Based in Mumbai. Open to senior creative/growth roles, retained consulting and selected e-commerce or product builds.</p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6" style="background:#0f172a;">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-          <div class="text-center md:text-left">
-            <div class="font-heading text-2xl font-bold mb-2 text-white">Mohit Dheeraj Parmar</div>
-            <div class="font-body text-sm" style="color:#94a3b8;">Creative Brand Strategist &amp; Gen-AI Enabler</div>
-          </div>
-
-          <div class="flex gap-4">
-            <!-- LinkedIn -->
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-               style="background: rgba(255,255,255,0.1);">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-               style="background: rgba(255,255,255,0.1);">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.25 1.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-              </svg>
-            </a>
-
-            <!-- YouTube -->
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-               style="background: rgba(255,255,255,0.1);">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.5 6.2s-.23-1.63-.95-2.35c-.91-.95-1.93-.95-2.4-1.01C16.77 2.5 12 2.5 12 2.5h-.01s-4.77 0-8.14.34c-.47.06-1.49.06-2.4 1.01C.73 4.57.5 6.2.5 6.2S.16 8.12.16 10.04v1.92c0 1.92.34 3.84.34 3.84s.23 1.63.95 2.35c.91.95 2.1.92 2.63 1.02 1.91.18 8.12.33 8.12.33s4.77-.01 8.14-.35c.47-.06 1.49-.06 2.4-1.01.72-.72.95-2.35.95-2.35s.34-1.92.34-3.84v-1.92c0-1.92-.34-3.84-.34-3.84zM9.75 14.02V7.98l6.27 3.02-6.27 3.02z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <div class="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div class="font-body text-sm" style="color:#94a3b8;">
-            © <span id="year"></span> Mohit Parmar. All rights reserved.
-          </div>
-          <div class="font-body text-sm" style="color:#94a3b8;">
-            Built with Tailwind • Designed for performance &amp; conversions
-          </div>
+    <section class="section">
+      <div class="shell faq">
+        <div class="reveal"><div class="section-kicker caps" style="margin-bottom:18px;">Good to know</div><h2 class="section-title" style="font-size:clamp(42px,5vw,68px);">Before we <em>work together.</em></h2></div>
+        <div class="faq-list reveal">
+          <details open><summary>What kind of work are you best suited for?</summary><p>Projects where creative, e-commerce and growth overlap — for example a Shopify store that needs better product presentation and conversion, a brand that needs a stronger paid creative system, or a team that needs one senior operator across both design and growth.</p></details>
+          <details><summary>Do you work remotely?</summary><p>Yes. I’m based in Mumbai and can work with teams in India, the UK, UAE and other markets remotely. The exact setup can be project-based, retained or role-based.</p></details>
+          <details><summary>Can you audit an existing website before a rebuild?</summary><p>Yes. In most cases I prefer that. A full redesign is not automatically the answer; the audit should identify whether the real issue is positioning, UX, merchandising, traffic, creative, tracking or technical execution.</p></details>
         </div>
       </div>
-    </footer>
+    </section>
 
-  </div>
+    <section class="contact" id="contact">
+      <div class="shell">
+        <div class="contact-top reveal">
+          <h2>Have a messy growth problem? <em>Send it.</em></h2>
+          <a class="contact-mail" href="mailto:mohitparmar110@gmail.com">EMAIL<br />MOHIT ↗</a>
+        </div>
+        <div class="footer-line">
+          <span>Mohit Parmar / Mumbai</span>
+          <span>Creative Direction · CRO · E-commerce · AI</span>
+          <span>© <span id="year"></span></span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- JS: Carousel + helpers -->
   <script>
-    (function () {
-      // Footer year
-      const y = document.getElementById("year");
-      if (y) y.textContent = new Date().getFullYear();
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-      // Carousel
-      const track = document.getElementById("carousel-track");
-      const prevBtn = document.getElementById("carousel-prev");
-      const nextBtn = document.getElementById("carousel-next");
-      const indicators = document.getElementById("carousel-indicators");
+    menuButton.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menuButton.querySelector('span').textContent = open ? '×' : '☰';
+    });
 
-      if (!track || !prevBtn || !nextBtn || !indicators) return;
-
-      const slides = Array.from(track.children);
-      let index = 0;
-
-      function itemsPerView() {
-        const w = window.innerWidth;
-        if (w >= 1024) return 3;
-        if (w >= 768) return 2;
-        return 1;
-      }
-
-      function totalPages() {
-        return Math.max(1, Math.ceil(slides.length / itemsPerView()));
-      }
-
-      function clampIndex(i) {
-        const pages = totalPages();
-        if (i < 0) return pages - 1;
-        if (i >= pages) return 0;
-        return i;
-      }
-
-      function slideWidth() {
-        // width of one "page" = container width
-        const container = document.getElementById("carousel-container");
-        return container ? container.clientWidth : window.innerWidth;
-      }
-
-      function buildIndicators() {
-        indicators.innerHTML = "";
-        const pages = totalPages();
-
-        for (let i = 0; i < pages; i++) {
-          const dot = document.createElement("button");
-          dot.type = "button";
-          dot.className = "w-2.5 h-2.5 rounded-full transition-all";
-          dot.style.background = i === index ? "#1e3a8a" : "rgba(30,58,138,0.25)";
-          dot.style.transform = i === index ? "scale(1.2)" : "scale(1)";
-          dot.addEventListener("click", () => {
-            index = i;
-            render();
-          });
-          indicators.appendChild(dot);
-        }
-      }
-
-      function updateIndicators() {
-        const dots = Array.from(indicators.children);
-        dots.forEach((d, i) => {
-          d.style.background = i === index ? "#1e3a8a" : "rgba(30,58,138,0.25)";
-          d.style.transform = i === index ? "scale(1.2)" : "scale(1)";
-        });
-      }
-
-      function render() {
-        index = clampIndex(index);
-        const x = index * slideWidth();
-        track.style.transform = `translateX(-${x}px)`;
-        buildIndicators();
-        updateIndicators();
-      }
-
-      prevBtn.addEventListener("click", () => { index--; render(); });
-      nextBtn.addEventListener("click", () => { index++; render(); });
-
-      // Keep the track aligned on resize
-      let resizeTimer = null;
-      window.addEventListener("resize", () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-          index = clampIndex(index);
-          render();
-        }, 80);
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        menuButton.querySelector('span').textContent = '☰';
       });
+    });
 
-      // Initial
-      render();
-    })();
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const scene = document.getElementById('heroScene');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reducedMotion && scene) {
+      window.addEventListener('pointermove', event => {
+        if (window.innerWidth < 900) return;
+        const x = (event.clientX / window.innerWidth - .5) * 10;
+        const y = (event.clientY / window.innerHeight - .5) * -10;
+        scene.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+      }, { passive: true });
+
+      window.addEventListener('pointerleave', () => {
+        scene.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
